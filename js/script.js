@@ -1,0 +1,5 @@
+var script = function(){
+	return {
+
+	}
+});
