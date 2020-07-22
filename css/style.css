@@ -1,16 +1,17 @@
 @charset "UTF-8";
 
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&subset=korean");
 
 *{margin:0; padding:0; box-sizing:border-box;}
 :before, :after{box-sizing:border-box}
 html{width:100%; height:100%}
-body{position:relative; font-family:"∏º¿∫ ∞ÌµÒ", "Malgun Gothic", sans-serif; font-size:16px; color:#797979; letter-spacing:-0.7px; height:100%; -webkit-text-size-adjust:100%; -moz-text-size-adjust:100%; -ms-text-size-adjust:100%; line-height:1; -webkit-overflow-scrolling: touch;}
+body{position:relative; font-family:"Noto Sans KR", "ÎßëÏùÄ Í≥†Îîï", "Malgun Gothic", sans-serif; font-weight:400; font-size:16px; color:#797979; letter-spacing:-0.7px; height:100%; -webkit-text-size-adjust:100%; -moz-text-size-adjust:100%; -ms-text-size-adjust:100%; line-height:1; -webkit-overflow-scrolling: touch;}
 body,div,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,p,form,fieldset,table,tr,th,td{margin:0; padding:0}
 ul,ol,li{list-style:none}
 img, fieldset{border:none; vertical-align:top}
 legend, caption{position:absolute; top:-9999px; left:-9999px; z-index:-1}
 textarea, button{vertical-align:middle}
-input, select{height:40px; vertical-align:middle; background:#fff; border:1px solid #c8c8c8; font-family:"∏º¿∫ ∞ÌµÒ", "Malgun Gothic", sans-serif; color:#000; letter-spacing:-0.6px; border-radius:0; font-size:16px}
+input, select{height:40px; vertical-align:middle; background:#fff; border:1px solid #c8c8c8; font-family:"Noto Sans KR", "ÎßëÏùÄ Í≥†Îîï", "Malgun Gothic", sans-serif; font-weight:400; color:#000; letter-spacing:-0.6px; border-radius:0; font-size:16px}
 input{padding:3px 15px;}
 option{padding:10px}
 input[type="radio"],input[type="checkbox"] {border:0; padding:0; height:auto; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none;}
@@ -21,11 +22,11 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
 select{padding:0 35px 0 15px; height:40px; font-size:16px; line-height:38px; color:#000; background:url('../images/selectD_open.gif') no-repeat right 15px top 50% #fff; border:1px solid #a8a8a8; -webkit-appearance: none; appearance:none; -moz-appearance:none;}
 select::-ms-expand{display:none}
 select::-ms-value{color:inherit; background:none}
-textarea{padding:10px; vertical-align:middle; background:#fff; border:1px solid #c8c8c8; font-family:"∏º¿∫ ∞ÌµÒ", "Malgun Gothic", sans-serif; color:#000; font-size:16px; letter-spacing:-0.6px; -webkit-appearance: none; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; border-radius:0}
+textarea{padding:10px; vertical-align:middle; background:#fff; border:1px solid #c8c8c8; font-family:"Noto Sans KR", "ÎßëÏùÄ Í≥†Îîï", "Malgun Gothic", sans-serif; font-weight:400; color:#000; font-size:16px; letter-spacing:-0.6px; -webkit-appearance: none; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; border-radius:0}
 a{text-decoration:none; color:#555;}
 a:hover, a:focus, a:active{text-decoration:none;}
 table{border-collapse:collapse; width:100%;}
-button{background:none; border:none; padding:0; margin:0; cursor:pointer; overflow:visible; white-space: nowrap; font-size:16px; font-family:"∏º¿∫ ∞ÌµÒ", "Malgun Gothic", sans-serif}
+button{background:none; border:none; padding:0; margin:0; cursor:pointer; overflow:visible; white-space: nowrap; font-size:16px; font-family:"Noto Sans KR", "ÎßëÏùÄ Í≥†Îîï", "Malgun Gothic", sans-serif; font-weight:400;}
 button:active {outline: none}
 button::-moz-focus-inner {padding:0; border:0;}
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {display: block;}
@@ -49,17 +50,30 @@ th, b, strong{font-weight:normal}
 
 
 #wrap{}
-.workList{margin:80px auto; width:1200px}
+.workList{margin:80px auto; width:1160px}
 .workList .title{text-align:center}
+.workList .tabs{margin:50px auto;}
+.workList .tabs:after{content:''; display:block; clear:both}
+.workList .tabs a{float:left; margin-left:15px; padding:0 16px; height:40px; font-size:17px; line-height:38px; color:#797979; text-align:center; border:1px solid #797979}
+.workList .tabs a:first-child{margin-left:0}
 .workList .listDiv{}
 .workList .listDiv:after{content:''; display:block; clear:both}
-.workList .listDiv .list{position:relative; float:left; margin-left:60px; width:360px; height:300px; border:2px solid #d0d0d0; border-radius:6px; overflow:hidden}
+.workList .listDiv .list{position:relative; top:100px; opacity:0; float:left; margin-left:40px; width:360px; height:352px; border:1px solid #d0d0d0; border-radius:6px; overflow:hidden; transition:all 0.6s cubic-bezier(0.55, 0, 0.1, 1)}
+.workList .listDiv .list:hover{box-shadow:5px 5px 10px 0 rgba(0, 0, 0, 0.15); transition:box-shadow 0.3s cubic-bezier(0.55, 0, 0.1, 1)}
 .workList .listDiv .list:nth-child(3n-2){margin-left:0; clear:both}
-.workList .listDiv .list:nth-child(n+4){margin-top:100px}
-.workList .listDiv .list .imgArea{}
-.workList .listDiv .list .txtArea{}
-.workList .listDiv .list .after{display:none; position:absolute; top:0; left:0; z-index:1; width:100%; height:100%; background:rgba(191,215,21,0.8);}
-
+.workList .listDiv .list:nth-child(n+4){margin-top:40px}
+.workList .listDiv .list .imgArea{height:200px; overflow:hidden}
+.workList .listDiv .list .imgArea img{width:100%}
+.workList .listDiv .list .txtArea{position:relative; padding:20px 22px; height:150px; background:#fff; z-index:2}
+.workList .listDiv .list .txtArea .type:after{content:''; display:block; clear:both}
+.workList .listDiv .list .txtArea .type span{float:left; margin-right:4px; padding:0 6px; height:20px; font-weight:300; font-size:13px; line-height:18px; text-align:center; border-radius:4px; border:1px solid #d0d0d0}
+.workList .listDiv .list .txtArea .type span:last-child{margin-right:0}
+.workList .listDiv .list .txtArea .tit{margin-top:12px; font-weight:500; font-size:20px; line-height:26px; color:#333; word-break:keep-all}
+.workList .listDiv .list .txtArea .tit span{display:inline; }
+.workList .listDiv .list .dimd{display:none; position:absolute; top:0; left:0; z-index:1; width:100%; height:200px; background:rgba(0, 0, 0, 0.6)}
+.workList .listDiv .list .dimd:after{content:'view more'; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); padding-right:20px; width:92px; font-size:14px; line-height:16px; color:#fff; background:url('../images/plus_icon.png') no-repeat right 1px}
+.workList .listDiv .list.ing .dimd{display:none}
+.workList .listDiv .list:hover .txtArea .tit span{background:url('../images/tit_bg.gif') repeat-x bottom 5px left}
 
 @media all and (max-width:1340px){
 	
