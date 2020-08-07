@@ -2,10 +2,51 @@
 
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&subset=korean");
 
+@font-face {
+    font-family: 'Metropolis-Thin';
+    font-weight: 100;
+    src: local('Metropolis-Thin'),
+    url('../fonts/Metropolis-Thin.woff2') format('woff2'),
+    url('../fonts/Metropolis-Thin.woff') format('woff'),
+    url('../fonts/Metropolis-Thin.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Metropolis-Light';
+    font-weight: 300;
+    src: local('Metropolis-Light'),
+    url('../fonts/Metropolis-Light.woff2') format('woff2'),
+    url('../fonts/Metropolis-Light.woff') format('woff'),
+    url('../fonts/Metropolis-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Metropolis-Regular';
+    font-weight: 400;
+    src: local('Metropolis-Regular'),
+    url('../fonts/Metropolis-Regular.woff2') format('woff2'),
+    url('../fonts/Metropolis-Regular.woff') format('woff'),
+    url('../fonts/Metropolis-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Metropolis-Medium';
+    font-weight: 500;
+    src: local('Metropolis-Medium'),
+    url('../fonts/Metropolis-Medium.woff2') format('woff2'),
+    url('../fonts/Metropolis-Medium.woff') format('woff'),
+    url('../fonts/Metropolis-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Metropolis-Bold';
+    font-weight: 700;
+    src: local('Metropolis-Bold'),
+    url('../fonts/Metropolis-Bold.woff2') format('woff2'),
+    url('../fonts/Metropolis-Bold.woff') format('woff'),
+    url('../fonts/Metropolis-Bold.ttf') format('truetype');
+}
+
 *{margin:0; padding:0; box-sizing:border-box;}
 :before, :after{box-sizing:border-box}
 html{width:100%; height:100%}
-body{position:relative; font-family:"Noto Sans KR", "맑은 고딕", "Malgun Gothic", sans-serif; font-weight:400; font-size:16px; color:#797979; letter-spacing:-0.7px; height:100%; -webkit-text-size-adjust:100%; -moz-text-size-adjust:100%; -ms-text-size-adjust:100%; line-height:1; -webkit-overflow-scrolling: touch;}
+body{position:relative; font-family:"Metropolis-Medium", "Noto Sans KR", "맑은 고딕", "Malgun Gothic", sans-serif; font-weight:400; font-size:16px; color:#797979; letter-spacing:-0.7px; height:100%; -webkit-text-size-adjust:100%; -moz-text-size-adjust:100%; -ms-text-size-adjust:100%; line-height:1; -webkit-overflow-scrolling: touch;}
 body,div,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,p,form,fieldset,table,tr,th,td{margin:0; padding:0}
 ul,ol,li{list-style:none}
 img, fieldset{border:none; vertical-align:top}
@@ -37,7 +78,6 @@ th, b, strong{font-weight:normal}
 :-ms-input-placeholder{color:#c8c8c8; font-size:15px;}
 :placeholder-shown{color:#c8c8c8; font-size:15px;}
 
-
 .inner{position:relative; margin:0 auto; width:1280px;}
 .inner:after{content:""; display:block; clear:both;}
 .clear:after{display:block; content:""; clear:both;}
@@ -48,15 +88,10 @@ th, b, strong{font-weight:normal}
 .taC{text-align:center}
 .dimdBg{display:none; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0, 0, 0, 0.7); z-index:4}
 
-
 #wrap{}
 .workList{margin:80px auto; width:1160px}
-.workList .title{text-align:center}
-.workList .tabs{margin:50px auto;}
-.workList .tabs:after{content:''; display:block; clear:both}
-.workList .tabs a{float:left; margin-left:15px; padding:0 16px; height:40px; font-size:17px; line-height:38px; color:#797979; text-align:center; border:1px solid #797979}
-.workList .tabs a:first-child{margin-left:0}
-.workList .listDiv{}
+.workList .title{font-weight:700; font-size:25px; color:#000; text-align:left}
+.workList .listDiv{margin-top:50px}
 .workList .listDiv:after{content:''; display:block; clear:both}
 .workList .listDiv .list{position:relative; top:100px; opacity:0; float:left; margin-left:40px; width:360px; height:352px; border:1px solid #d0d0d0; border-radius:6px; overflow:hidden; transition:all 0.6s cubic-bezier(0.55, 0, 0.1, 1)}
 .workList .listDiv .list:hover{box-shadow:5px 5px 10px 0 rgba(0, 0, 0, 0.15); transition:box-shadow 0.3s cubic-bezier(0.55, 0, 0.1, 1)}
@@ -64,16 +99,24 @@ th, b, strong{font-weight:normal}
 .workList .listDiv .list:nth-child(n+4){margin-top:40px}
 .workList .listDiv .list .imgArea{height:200px; overflow:hidden}
 .workList .listDiv .list .imgArea img{width:100%}
-.workList .listDiv .list .txtArea{position:relative; padding:20px 22px; height:150px; background:#fff; z-index:2}
+.workList .listDiv .list .txtArea{position:relative; padding:20px 22px; height:150px; background:#fff; border-top:1px solid #d0d0d0; z-index:2}
 .workList .listDiv .list .txtArea .type:after{content:''; display:block; clear:both}
-.workList .listDiv .list .txtArea .type span{float:left; margin-right:4px; padding:0 6px; height:20px; font-weight:300; font-size:13px; line-height:18px; text-align:center; border-radius:4px; border:1px solid #d0d0d0}
+.workList .listDiv .list .txtArea .type span{float:left; margin-right:4px; padding:4px 6px 1px;  font-weight:300; font-size:13px; text-align:center; border-radius:4px; border:1px solid #d0d0d0}
+.workList .listDiv .list .txtArea .type span.ing{color:#000; border:1px solid #000}
+.workList .listDiv .list .txtArea .type span.projectType{color:#f22867; border:1px solid rgba(242, 40, 103, 0.8)}
+.workList .listDiv .list .txtArea .type span.responsive{color:#00959c; border:1px solid rgba(0, 149, 156, 0.8)}
+.workList .listDiv .list .txtArea .type span.pcweb{color:#004d45; border:1px solid rgba(0, 77, 69, 0.8)}
+.workList .listDiv .list .txtArea .type span.mobweb{color:#0067ac; border:1px solid rgba(0, 103, 172, 0.8)}
 .workList .listDiv .list .txtArea .type span:last-child{margin-right:0}
 .workList .listDiv .list .txtArea .tit{margin-top:12px; font-weight:500; font-size:20px; line-height:26px; color:#333; word-break:keep-all}
 .workList .listDiv .list .txtArea .tit span{display:inline; }
-.workList .listDiv .list .dimd{display:none; position:absolute; top:0; left:0; z-index:1; width:100%; height:200px; background:rgba(0, 0, 0, 0.6)}
-.workList .listDiv .list .dimd:after{content:'view more'; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); padding-right:20px; width:92px; font-size:14px; line-height:16px; color:#fff; background:url('../images/plus_icon.png') no-repeat right 1px}
+.workList .listDiv .list.Maintenance .imgArea{font-size:18px; line-height:200px; color:#fff; text-align:center; background:#929292}
+.workList .listDiv .list .dimd{display:none; position:absolute; top:0; left:0; z-index:1; width:100%; height:200px; background:rgba(0, 0, 0, 0.2)}
+.workList .listDiv .list .dimd:after{content:''; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:60px; height:60px; background: url('../images/moreBtn.png') no-repeat center #fff; border-radius:100%; z-index:1}
 .workList .listDiv .list.ing .dimd{display:none}
-.workList .listDiv .list:hover .txtArea .tit span{background:url('../images/tit_bg.gif') repeat-x bottom 5px left}
+.workList .listDiv .list:hover .txtArea .tit span{background:url('../images/tit_bg.gif') repeat-x bottom 4px left}
+
+.viewPop{position:fixed; top:50%; left:50%; transform:translate(-50%, -50%)}
 
 @media all and (max-width:1340px){
 	

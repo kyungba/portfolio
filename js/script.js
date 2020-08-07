@@ -63,25 +63,8 @@ var script = (function(){
 				}
 			});$(window).scroll();
 		},
-		listTabEvt : function(){
-			$(".tabs a").each(function(){
-				var typeName;
-				$(this).click(function(){
-					
-					typeName = $(this).attr("class");
-					if(typeName.indexOf("all") > -1){
-						$(".workList .listDiv .list").fadeIn(400);
-					}else{
-						$(".workList .listDiv .list").each(function(q){
-							if($(this).hasClass(typeName)){
-								$(this).fadeIn(400);
-							}else{
-								$(this).fadeOut(400);
-							}
-						});
-					}
-				});
-			});
+		resizeEvt : function(){
+			
 		},
 	}
 })();
@@ -90,7 +73,6 @@ var script = (function(){
 
 $(document).ready(function(){
 	script.scrollEvt();
-	script.listTabEvt();
 });
 
 
