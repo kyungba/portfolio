@@ -68,12 +68,20 @@ var script = (function(){
 			$(".listDiv .list").each(function(){
 				$(this).click(function(){
 					$(".viewPop").stop(true, true).fadeIn(300);
-					$(".viewPop .titArea .tit").text($(this).find(".txtArea .tit").text());
-					$(".viewPop .titArea .link").attr("href", $(this).data("href"));
-					for (var i=0; i < $(this).data("img-size"); i++){
-						$(".viewPop .conArea .imgArea").append('<img src="./images/project_view_'+$(this).attr("id")+i+'.jpg" alt="" />');
-					}	
+					if(!$(".viewPop").hasClass($(this).attr("id"))){
+						console.log(11)
+						$(".viewPop").removeClass().addClass("viewPop").addClass($(this).attr("id"));
+						$(".viewPop .titArea .tit").text($(this).find(".txtArea .tit").text());
+						$(".viewPop .titArea .link").attr("href", $(this).data("href"));
+						$(".viewPop .conArea .imgArea").empty();
+						for (var i=0; i < $(this).data("img-size"); i++){
+							$(".viewPop .conArea .imgArea").append('<img src="./images/project_view_'+$(this).attr("id")+i+'.jpg" alt="" />');
+						}	
+					}
 				});
+			});
+			$(".viewPop .xBtn").click(function(){
+				$(".viewPop").stop(true, true).fadeOut(300);
 			});
 		},
 	}
