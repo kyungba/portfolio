@@ -93,7 +93,7 @@ th, b, strong{font-weight:normal}
 .workList .title{font-weight:700; font-size:25px; color:#000; text-align:left}
 .workList .listDiv{margin-top:50px}
 .workList .listDiv:after{content:''; display:block; clear:both}
-.workList .listDiv .list{position:relative; top:100px; opacity:0; float:left; margin-left:40px; width:360px; height:352px; border:1px solid #d0d0d0; border-radius:6px; overflow:hidden; transition:all 0.6s cubic-bezier(0.55, 0, 0.1, 1); cursor:pointer}
+.workList .listDiv .list{position:relative; top:100px; opacity:0; float:left; margin-left:40px; width:360px; height:352px; border:1px solid #d0d0d0; border-radius:6px; overflow:hidden; transition:all 0.6s ease; cursor:pointer}
 .workList .listDiv .list:hover{box-shadow:5px 5px 10px 0 rgba(0, 0, 0, 0.15); transition:box-shadow 0.3s cubic-bezier(0.55, 0, 0.1, 1)}
 .workList .listDiv .list:nth-child(3n-2){margin-left:0; clear:both}
 .workList .listDiv .list:nth-child(n+4){margin-top:40px}
@@ -107,6 +107,7 @@ th, b, strong{font-weight:normal}
 .workList .listDiv .list .txtArea .type span.responsive{color:#00959c; border:1px solid rgba(0, 149, 156, 0.8)}
 .workList .listDiv .list .txtArea .type span.pcweb{color:#004d45; border:1px solid rgba(0, 77, 69, 0.8)}
 .workList .listDiv .list .txtArea .type span.mobweb{color:#0067ac; border:1px solid rgba(0, 103, 172, 0.8)}
+.workList .listDiv .list .txtArea .type span.app{color:#146f7a; border:1px solid rgba(20, 111, 122, 0.8)}
 .workList .listDiv .list .txtArea .type span:last-child{margin-right:0}
 .workList .listDiv .list .txtArea .tit{margin-top:12px; font-weight:500; font-size:20px; line-height:26px; color:#333; word-break:keep-all}
 .workList .listDiv .list .txtArea .tit span{display:inline; }
@@ -114,15 +115,22 @@ th, b, strong{font-weight:normal}
 .workList .listDiv .list .dimd{display:none; position:absolute; top:0; left:0; z-index:1; width:100%; height:200px; background:rgba(0, 0, 0, 0.2)}
 .workList .listDiv .list .dimd:after{content:''; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:60px; height:60px; background: url('../images/moreBtn.png') no-repeat center #fff; border-radius:100%; z-index:1}
 .workList .listDiv .list.ing .dimd:after{content:'작업중'; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:60px; height:60px; font-size:18px; line-height:60px; color:#fff; text-align:center; z-index:1; background:none}
-.workList .listDiv .list:hover .txtArea .tit span{background:url('../images/tit_bg.gif') repeat-x bottom 4px left}
+.workList .listDiv .list:hover .txtArea .tit span{background:url('../images/tit_bg.gif') repeat-x bottom 3px left}
 
 .viewPop{display:none; position:fixed; top:0; left:0; padding:50px 5%; width:100%; height:100%; background:rgba(0, 0, 0, 0.6); z-index:10}
 .viewPop .popCon{padding:25px 0; background:#fff; height:auto; max-height:100%}
 .viewPop .popCon .titArea{position:relative; margin:0 auto; padding-bottom:19px; width:calc(100% - 60px); width:-webkit-calc(100% - 60px); border-bottom:1px solid #c8c8c8}
 .viewPop .popCon .titArea .tit{padding-right:60px; font-size:20px; color:#000; word-break:keep-all}
 .viewPop .popCon .titArea .link{position:absolute; top:5px; right:30px; width:10px; height:10px; background:#000}
-.viewPop .popCon .conArea{padding:40px 30px; overflow-y:auto}
+.viewPop .popCon .conArea{padding:40px 30px; height:100%; text-align:center; overflow-y:auto}
+.viewPop .popCon .conArea .imgArea img{max-width:100%}
 
-@media all and (max-width:1340px){
-	
+@media all and (max-width:1280px){
+	.inner{width:1050px}
+	.workList .listDiv .list{width:280px; margin-left:30px}
+
+}
+
+@media all and (max-width:981px){
+
 }
