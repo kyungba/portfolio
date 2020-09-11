@@ -69,7 +69,6 @@ var script = (function(){
 				$(this).click(function(){
 					$(".viewPop").stop(true, true).fadeIn(300);
 					if(!$(".viewPop").hasClass($(this).attr("id"))){
-						console.log(11)
 						$(".viewPop").removeClass().addClass("viewPop").addClass($(this).attr("id"));
 						$(".viewPop .titArea .tit").text($(this).find(".txtArea .tit").text());
 						$(".viewPop .titArea .link").attr("href", $(this).data("href"));

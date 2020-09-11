@@ -127,8 +127,10 @@ th, b, strong{font-weight:normal}
 .viewPop .popCon .xBtn{position:absolute; top:25px; right:20px; width:20px; height:20px; background:#ff0000}
 
 @media all and (max-width:1280px){
-	.inner{width:1050px}
-	.workList .listDiv .list{width:280px; margin-left:30px}
+	.workList{width:930px}
+	.workList .listDiv .list{width:280px; height:307px; margin-left:30px}
+	.workList .listDiv .list .imgArea{height:155px}
+	.workList .listDiv .list .txtArea .tit{font-size:18px}
 
 }
 
