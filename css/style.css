@@ -89,17 +89,19 @@ th, b, strong{font-weight:normal}
 .dimdBg{display:none; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0, 0, 0, 0.7); z-index:4}
 
 #wrap{}
-.workList{margin:80px auto; width:1160px}
+#content{padding-top:80px}
+.workList{margin:0 auto; width:1160px}
 .workList .title{font-weight:700; font-size:25px; color:#000; text-align:left}
 .workList .listDiv{margin-top:50px}
 .workList .listDiv:after{content:''; display:block; clear:both}
 .workList .listDiv .list{position:relative; top:100px; opacity:0; float:left; margin-left:40px; width:360px; height:352px; border:1px solid #d0d0d0; border-radius:6px; overflow:hidden; transition:all 0.6s ease; cursor:pointer}
 .workList .listDiv .list:hover{box-shadow:5px 5px 10px 0 rgba(0, 0, 0, 0.15); transition:box-shadow 0.3s cubic-bezier(0.55, 0, 0.1, 1)}
-.workList .listDiv .list:nth-child(3n-2){margin-left:0; clear:both}
+.workList .listDiv .list:nth-child(3n-2){margin-left:0}
 .workList .listDiv .list:nth-child(n+4){margin-top:40px}
-.workList .listDiv .list .imgArea{height:200px; overflow:hidden}
+.workList .listDiv .list:nth-child(3n+1){clear:both}
+.workList .listDiv .list .imgArea{height:200px; overflow:hidden; transition:height 0.6s ease}
 .workList .listDiv .list .imgArea img{width:100%}
-.workList .listDiv .list .txtArea{position:relative; padding:20px 22px; height:150px; background:#fff; border-top:1px solid #d0d0d0; z-index:2}
+.workList .listDiv .list .txtArea{position:relative; padding:20px 22px; height:150px; background:#fff; border-top:1px solid #d0d0d0; z-index:1}
 .workList .listDiv .list .txtArea .type:after{content:''; display:block; clear:both}
 .workList .listDiv .list .txtArea .type span{float:left; margin-right:4px; padding:4px 6px 1px;  font-weight:300; font-size:13px; text-align:center; border-radius:4px; border:1px solid #d0d0d0}
 .workList .listDiv .list .txtArea .type span.ing{color:#000; border:1px solid #000}
@@ -110,30 +112,64 @@ th, b, strong{font-weight:normal}
 .workList .listDiv .list .txtArea .type span.app{color:#146f7a; border:1px solid rgba(20, 111, 122, 0.8)}
 .workList .listDiv .list .txtArea .type span:last-child{margin-right:0}
 .workList .listDiv .list .txtArea .tit{margin-top:12px; font-weight:500; font-size:20px; line-height:26px; color:#333; word-break:keep-all}
-.workList .listDiv .list .txtArea .tit span{display:inline; }
+.workList .listDiv .list .txtArea .tit span{display:inline}
 .workList .listDiv .list.maintenance .imgArea{font-size:18px; line-height:200px; color:#fff; text-align:center; background:#929292}
-.workList .listDiv .list .dimd{display:none; position:absolute; top:0; left:0; z-index:1; width:100%; height:200px; background:rgba(0, 0, 0, 0.2)}
-.workList .listDiv .list .dimd:after{content:''; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:60px; height:60px; background: url('../images/moreBtn.png') no-repeat center #fff; border-radius:100%; z-index:1}
+.workList .listDiv .list .dimd{display:none; position:absolute; top:0; left:0; z-index:1; width:100%; height:100%}
+.workList .listDiv .list .dimd:after{content:'View project'; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); padding-bottom:24px; width:90px; height:40px; font-weight:700; font-size:16px; color:#fff; text-align:center; background: url('../images/moreBtn.png') no-repeat center bottom; z-index:1}
 .workList .listDiv .list.ing .dimd:after{content:'작업중'; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:60px; height:60px; font-size:18px; line-height:60px; color:#fff; text-align:center; z-index:1; background:none}
 .workList .listDiv .list:hover .txtArea .tit span{background:url('../images/tit_bg.gif') repeat-x bottom 3px left}
 
-.viewPop{display:none; position:fixed; top:0; left:0; padding:50px 5%; width:100%; height:100%; background:rgba(0, 0, 0, 0.6); z-index:10}
-.viewPop .popCon{position:relative; padding:25px 0; background:#fff; height:auto; max-height:100%}
+.dimdBg{display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0, 0, 0, 0.6); z-index:9}
+.viewPop{display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); width:900px; z-index:10}
+.viewPop .popCon{position:relative; padding:25px 0 0; margin:0 auto; background:#fff; height:100%}
 .viewPop .popCon .titArea{position:relative; margin:0 auto; padding-bottom:19px; width:calc(100% - 60px); width:-webkit-calc(100% - 60px); border-bottom:1px solid #c8c8c8}
 .viewPop .popCon .titArea .tit{padding-right:60px; font-size:20px; color:#000; word-break:keep-all}
 .viewPop .popCon .titArea .link{position:absolute; top:5px; right:30px; width:10px; height:10px; background:#000}
-.viewPop .popCon .conArea{padding:40px 30px; height:100%; text-align:center; overflow-y:auto}
+.viewPop .popCon .conArea{padding:40px 30px 0; height:calc(100% - 40px); height:-webkit-calc(100% - 40px); text-align:center; overflow-y:auto}
+.viewPop .popCon .conArea:after{content:''; display:block; position:relative; width:100%; height:40px; background:#fff}
 .viewPop .popCon .conArea .imgArea img{max-width:100%}
-.viewPop .popCon .xBtn{position:absolute; top:25px; right:20px; width:20px; height:20px; background:#ff0000}
+.viewPop .popCon .xBtn{position:absolute; top:25px; right:30px; width:20px; height:20px; background:#ff0000}
 
 @media all and (max-width:1280px){
-	.workList{width:930px}
+	.workList{width:900px}
 	.workList .listDiv .list{width:280px; height:307px; margin-left:30px}
 	.workList .listDiv .list .imgArea{height:155px}
 	.workList .listDiv .list .txtArea .tit{font-size:18px}
-
+	.viewPop{width:800px}
 }
 
 @media all and (max-width:981px){
+	.workList{width:90%}
+	.workList .title{font-size:20px;}
+	.workList .listDiv{margin-top:30px}
+	.workList .listDiv .list{margin-left:20px; width:calc(50% - 10px); width:-webkit-calc(50% - 10px); height:auto}
+	.workList .listDiv .list:nth-child(3n-2){margin-left:20px}
+	.workList .listDiv .list:nth-child(2n-1){margin-left:0}
+	.workList .listDiv .list:nth-child(n+4){margin-top:0}
+	.workList .listDiv .list:nth-child(n+3){margin-top:20px}
+	.workList .listDiv .list:nth-child(3n+1){clear:none}
+	.workList .listDiv .list:nth-child(2n+1){clear:both}
+	.workList .listDiv .list .imgArea{height:auto}
+	.workList .listDiv .list .txtArea{padding:12px 15px; height:100px}
+	.workList .listDiv .list .txtArea .type span{padding:3px 4px 1px; margin-right:2px; font-size:11px}
+	.workList .listDiv .list .txtArea .tit{margin-top:8px; font-weight:500; font-size:15px; line-height:22px}
+	.workList .listDiv .list:hover .txtArea .tit span{background-size:1px 3px}
+	.viewPop{width:90%}
+	.viewPop .popCon{padding:15px 0 0}
+	.viewPop .popCon .titArea{padding-bottom:12px; width:calc(100% - 40px); width:-webkit-calc(100% - 40px)}
+	.viewPop .popCon .titArea .tit{display:table; padding-right:; height:36px; font-size:15px; line-height:18px; color:#000;}
+	.viewPop .popCon .titArea .tit span{display:table-cell; vertical-align:middle}
 
+	.viewPop .popCon .titArea .link{}
+	.viewPop .popCon .conArea{padding:25px 20px 0; height:calc(100% - 49px); height:-webkit-calc(100% - 49px)}
+	.viewPop .popCon .conArea:after{height:25px}
+	.viewPop .popCon .xBtn{}
+}
+
+@media all and (max-width:520px){
+	.workList .listDiv .list{margin-left:0; width:100%}
+	.workList .listDiv .list:nth-child(3n-2){margin-left:0}
+	.workList .listDiv .list:nth-child(n+3){margin-top:0}
+	.workList .listDiv .list:nth-child(n+2){margin-top:15px}
+	.workList .listDiv .list:nth-child(2n+1){clear:none}
 }
