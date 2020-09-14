@@ -113,6 +113,7 @@ th, b, strong{font-weight:normal}
 .workList .listDiv .list .txtArea .type span:last-child{margin-right:0}
 .workList .listDiv .list .txtArea .tit{margin-top:12px; font-weight:500; font-size:20px; line-height:26px; color:#333; word-break:keep-all}
 .workList .listDiv .list .txtArea .tit span{display:inline}
+.workList .listDiv .list .txtArea .kindD{display:none}
 .workList .listDiv .list.maintenance .imgArea{font-size:18px; line-height:200px; color:#fff; text-align:center; background:#929292}
 .workList .listDiv .list .dimd{display:none; position:absolute; top:0; left:0; z-index:1; width:100%; height:100%}
 .workList .listDiv .list .dimd:after{content:'View project'; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); padding-bottom:24px; width:96px; height:40px; font-weight:700; font-size:16px; color:#fff; text-align:center; background: url('../images/moreBtn.png') no-repeat center bottom; z-index:1}
