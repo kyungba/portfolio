@@ -97,7 +97,7 @@ var script = (function(){
 								if($(".viewPop .titArea .link").hasClass("on")){
 									$(".viewPop .titArea .link").removeClass("on");
 								}
-								$(".viewPop .titArea .link").attr("href", $(this).data("href"));
+								$(".viewPop .titArea .link a").attr("href", $(this).data("href"));
 							}
 							$(".viewPop .etcArea").empty();
 							$(".viewPop .conArea .imgArea").empty();
