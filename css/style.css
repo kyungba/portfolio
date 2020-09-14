@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&subset=korean");
 
 @font-face {
-    font-family: 'Metropolis-Thin';
+    font-family: 'Metropolis';
     font-weight: 100;
     src: local('Metropolis-Thin'),
     url('../fonts/Metropolis-Thin.woff2') format('woff2'),
@@ -11,7 +11,7 @@
     url('../fonts/Metropolis-Thin.ttf') format('truetype');
 }
 @font-face {
-    font-family: 'Metropolis-Light';
+    font-family: 'Metropolis';
     font-weight: 300;
     src: local('Metropolis-Light'),
     url('../fonts/Metropolis-Light.woff2') format('woff2'),
@@ -19,7 +19,7 @@
     url('../fonts/Metropolis-Light.ttf') format('truetype');
 }
 @font-face {
-    font-family: 'Metropolis-Regular';
+    font-family: 'Metropolis';
     font-weight: 400;
     src: local('Metropolis-Regular'),
     url('../fonts/Metropolis-Regular.woff2') format('woff2'),
@@ -27,7 +27,7 @@
     url('../fonts/Metropolis-Regular.ttf') format('truetype');
 }
 @font-face {
-    font-family: 'Metropolis-Medium';
+    font-family: 'Metropolis';
     font-weight: 500;
     src: local('Metropolis-Medium'),
     url('../fonts/Metropolis-Medium.woff2') format('woff2'),
@@ -35,7 +35,7 @@
     url('../fonts/Metropolis-Medium.ttf') format('truetype');
 }
 @font-face {
-    font-family: 'Metropolis-Bold';
+    font-family: 'Metropolis';
     font-weight: 700;
     src: local('Metropolis-Bold'),
     url('../fonts/Metropolis-Bold.woff2') format('woff2'),
@@ -46,7 +46,7 @@
 *{margin:0; padding:0; box-sizing:border-box;}
 :before, :after{box-sizing:border-box}
 html{width:100%; height:100%}
-body{position:relative; font-family:"Metropolis-Medium", "Noto Sans KR", "맑은 고딕", "Malgun Gothic", sans-serif; font-weight:400; font-size:16px; color:#797979; letter-spacing:-0.7px; height:100%; -webkit-text-size-adjust:100%; -moz-text-size-adjust:100%; -ms-text-size-adjust:100%; line-height:1; -webkit-overflow-scrolling: touch;}
+body{position:relative; font-family:"Metropolis", "Noto Sans KR", "맑은 고딕", "Malgun Gothic", sans-serif; font-weight:400; font-size:16px; color:#797979; letter-spacing:-0.7px; height:100%; -webkit-text-size-adjust:100%; -moz-text-size-adjust:100%; -ms-text-size-adjust:100%; line-height:1; -webkit-overflow-scrolling: touch;}
 body,div,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,p,form,fieldset,table,tr,th,td{margin:0; padding:0}
 ul,ol,li{list-style:none}
 img, fieldset{border:none; vertical-align:top}
@@ -115,20 +115,41 @@ th, b, strong{font-weight:normal}
 .workList .listDiv .list .txtArea .tit span{display:inline}
 .workList .listDiv .list.maintenance .imgArea{font-size:18px; line-height:200px; color:#fff; text-align:center; background:#929292}
 .workList .listDiv .list .dimd{display:none; position:absolute; top:0; left:0; z-index:1; width:100%; height:100%}
-.workList .listDiv .list .dimd:after{content:'View project'; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); padding-bottom:24px; width:90px; height:40px; font-weight:700; font-size:16px; color:#fff; text-align:center; background: url('../images/moreBtn.png') no-repeat center bottom; z-index:1}
+.workList .listDiv .list .dimd:after{content:'View project'; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); padding-bottom:24px; width:96px; height:40px; font-weight:700; font-size:16px; color:#fff; text-align:center; background: url('../images/moreBtn.png') no-repeat center bottom; z-index:1}
 .workList .listDiv .list.ing .dimd:after{content:'작업중'; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:60px; height:60px; font-size:18px; line-height:60px; color:#fff; text-align:center; z-index:1; background:none}
 .workList .listDiv .list:hover .txtArea .tit span{background:url('../images/tit_bg.gif') repeat-x bottom 3px left}
 
 .dimdBg{display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0, 0, 0, 0.6); z-index:9}
-.viewPop{display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); width:900px; z-index:10}
-.viewPop .popCon{position:relative; padding:25px 0 0; margin:0 auto; background:#fff; height:100%}
-.viewPop .popCon .titArea{position:relative; margin:0 auto; padding-bottom:19px; width:calc(100% - 60px); width:-webkit-calc(100% - 60px); border-bottom:1px solid #c8c8c8}
-.viewPop .popCon .titArea .tit{padding-right:60px; font-size:20px; color:#000; word-break:keep-all}
-.viewPop .popCon .titArea .link{position:absolute; top:5px; right:30px; width:10px; height:10px; background:#000}
-.viewPop .popCon .conArea{padding:40px 30px 0; height:calc(100% - 40px); height:-webkit-calc(100% - 40px); text-align:center; overflow-y:auto}
+.viewPop{display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); width:1400px; z-index:10}
+.viewPop .popCon{position:relative; padding:35px 0 0; margin:0 auto; background:#fff; height:100%}
+.viewPop .popCon .titArea{position:relative; margin:0 auto 70px; padding-bottom:34px; width:calc(100% - 80px); width:-webkit-calc(100% - 80px); border-bottom:1px solid #c8c8c8}
+.viewPop .popCon .titArea .tit span{font-family:'Noto Sans KR'; font-weight:500; font-size:26px; line-height:25px; color:#333; word-break:keep-all}
+.viewPop .popCon .titArea .link{position:absolute; top:80px; left:0; }
+.viewPop .popCon .titArea .link span{position:relative; padding-right:16px; font-weight:700; font-size:20px; line-height:26px; color:#555; background:url('../images/link_icon.png') no-repeat right 1px top 3px}
+.viewPop .popCon .titArea .link b{display:none}
+.viewPop .popCon .titArea .link.on span{display:none}
+.viewPop .popCon .titArea .link.on b{display:block; font-family:'Noto Sans KR'; font-weight:500; font-size:14px; color:#e64949;}
+.viewPop .popCon .conArea{padding:0 40px 0; height:calc(100% - 130px); height:-webkit-calc(100% - 130px); text-align:center; overflow-y:auto}
 .viewPop .popCon .conArea:after{content:''; display:block; position:relative; width:100%; height:40px; background:#fff}
-.viewPop .popCon .conArea .imgArea img{max-width:100%}
-.viewPop .popCon .xBtn{position:absolute; top:25px; right:30px; width:20px; height:20px; background:#ff0000}
+.viewPop .popCon .conArea .imgArea{width:calc(100% + 17px); width:-webkit-calc(100% + 17px)}
+.viewPop .popCon .conArea .imgArea img{width:100%}
+.viewPop .popCon .conArea .etcArea{text-align:left}
+.viewPop .popCon .conArea .etcArea .kind{margin-top:50px}
+.viewPop .popCon .conArea .etcArea .kind:first-child{margin-top:0}
+.viewPop .popCon .conArea .etcArea .kind .title{font-family:'Noto Sans KR'; font-weight:400; font-size:18px; color:#333}
+.viewPop .popCon .conArea .etcArea .kind .proListD ul{margin-top:14px}
+.viewPop .popCon .conArea .etcArea .kind .proListD ul li{padding-left:14px; margin-top:8px; font-family:'Noto Sans KR'; font-weight:300; font-size:15px; line-height:16px; color:#666; background:url('../images/dot3x3.gif') no-repeat left center}
+.viewPop .popCon .conArea .etcArea .kind .proListD ul li:first-child{margin-top:0}
+.viewPop .popCon .conArea .etcArea .kind .proListD ul li:after{content:''; display:block; clear:both}
+.viewPop .popCon .conArea .etcArea .kind .proListD ul li p{float:left}
+.viewPop .popCon .conArea .etcArea .kind .proListD ul li a{float:left}
+.viewPop .popCon .xBtn{position:absolute; top:35px; right:40px; width:26px; height:26px; background:url('../images/viewPop_close.png') no-repeat; background-size:cover}
+.viewPop.etc .popCon .titArea{margin:0 auto 30px}
+.viewPop.etc .popCon .conArea{height:calc(100% - 90px); height:-webkit-calc(100% - 90px);}
+
+@media all and (max-width:1560px){
+	.viewPop{width:1100px}
+}
 
 @media all and (max-width:1280px){
 	.workList{width:900px}
@@ -156,14 +177,23 @@ th, b, strong{font-weight:normal}
 	.workList .listDiv .list:hover .txtArea .tit span{background-size:1px 3px}
 	.viewPop{width:90%}
 	.viewPop .popCon{padding:15px 0 0}
-	.viewPop .popCon .titArea{padding-bottom:12px; width:calc(100% - 40px); width:-webkit-calc(100% - 40px)}
-	.viewPop .popCon .titArea .tit{display:table; padding-right:; height:36px; font-size:15px; line-height:18px; color:#000;}
-	.viewPop .popCon .titArea .tit span{display:table-cell; vertical-align:middle}
+	.viewPop .popCon .titArea{margin:0 auto 50px; padding-bottom:12px; width:calc(100% - 60px); width:-webkit-calc(100% - 60px)}
+	.viewPop .popCon .titArea .tit{display:table; padding-right:35px; height:36px}
+	.viewPop .popCon .titArea .tit span{display:table-cell; vertical-align:middle; font-size:15px; line-height:18px; color:#000;}
+	.viewPop .popCon .titArea .link{top:65px;}
+	.viewPop .popCon .titArea .link span{font-size:14px; line-height:1; background:url('../images/m_link_icon.png') no-repeat right 1px top; background-size:7px 12px}
+	.viewPop .popCon .titArea .link b{}
+	.viewPop .popCon .conArea{padding:0 30px 0; height:calc(100% - 99px); height:-webkit-calc(100% - 99px)}
+	.viewPop .popCon .conArea:after{height:26px}
+	.viewPop .popCon .conArea .imgArea{width:100%}
+	.viewPop .popCon .xBtn{top:23px; right:30px; width:20px; height:20px; background:url('../images/m_viewPop_close.png') no-repeat; background-size:cover}
+}
 
-	.viewPop .popCon .titArea .link{}
-	.viewPop .popCon .conArea{padding:25px 20px 0; height:calc(100% - 49px); height:-webkit-calc(100% - 49px)}
-	.viewPop .popCon .conArea:after{height:25px}
-	.viewPop .popCon .xBtn{}
+@media all and (max-width:758px){
+	.viewPop .popCon .titArea{width:calc(100% - 40px); width:-webkit-calc(100% - 40px)}
+	.viewPop .popCon .titArea .tit{padding-right:25px}
+	.viewPop .popCon .conArea{padding:0 20px 0}
+	.viewPop .popCon .xBtn{right:20px}
 }
 
 @media all and (max-width:520px){
