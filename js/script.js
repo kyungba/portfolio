@@ -80,10 +80,13 @@ var script = (function(){
 			});$(window).scroll();
 		},
 		viewPop : function(){
+			var scrollT = 0;
 			$(".listDiv .list").each(function(){
 				$(this).click(function(){
 					$(".dimdBg").stop(true, true).fadeIn(300);
 					$(".viewPop").stop(true, true).fadeIn(300);
+					scrollT = $(window).scrollTop();
+					$("html").addClass("lock");
 					if(!$(".viewPop").hasClass($(this).attr("id"))){
 						$(".viewPop").removeClass().addClass("viewPop").addClass($(this).attr("id"));
 						$(".viewPop .titArea .tit span").text($(this).find(".txtArea .tit").text());
@@ -124,6 +127,8 @@ var script = (function(){
 			$(".viewPop .xBtn").click(function(){
 				$(".dimdBg").stop(true, true).fadeOut(300);
 				$(".viewPop").stop(true, true).fadeOut(300);
+				$("html").removeClass("lock");
+				$("html, body").scrollTop(scrollT);
 			});
 		},
 	}
