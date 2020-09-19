@@ -6,41 +6,41 @@
     font-family: 'Metropolis';
     font-weight: 100;
     src: local('Metropolis-Thin'),
-    url('./fonts/Metropolis-Thin.woff2') format('woff2'),
-    url('./fonts/Metropolis-Thin.woff') format('woff'),
-    url('./fonts/Metropolis-Thin.ttf') format('truetype');
+    url('../fonts/Metropolis-Thin.woff2') format('woff2'),
+    url('../fonts/Metropolis-Thin.woff') format('woff'),
+    url('../fonts/Metropolis-Thin.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Metropolis';
     font-weight: 300;
     src: local('Metropolis-Light'),
-    url('./fonts/Metropolis-Light.woff2') format('woff2'),
-    url('./fonts/Metropolis-Light.woff') format('woff'),
-    url('./fonts/Metropolis-Light.ttf') format('truetype');
+    url('../fonts/Metropolis-Light.woff2') format('woff2'),
+    url('../fonts/Metropolis-Light.woff') format('woff'),
+    url('../fonts/Metropolis-Light.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Metropolis';
     font-weight: 400;
     src: local('Metropolis-Regular'),
-    url('./fonts/Metropolis-Regular.woff2') format('woff2'),
-    url('./fonts/Metropolis-Regular.woff') format('woff'),
-    url('./fonts/Metropolis-Regular.ttf') format('truetype');
+    url('../fonts/Metropolis-Regular.woff2') format('woff2'),
+    url('../fonts/Metropolis-Regular.woff') format('woff'),
+    url('../fonts/Metropolis-Regular.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Metropolis';
     font-weight: 500;
     src: local('Metropolis-Medium'),
-    url('./fonts/Metropolis-Medium.woff2') format('woff2'),
-    url('./fonts/Metropolis-Medium.woff') format('woff'),
-    url('./fonts/Metropolis-Medium.ttf') format('truetype');
+    url('../fonts/Metropolis-Medium.woff2') format('woff2'),
+    url('../fonts/Metropolis-Medium.woff') format('woff'),
+    url('../fonts/Metropolis-Medium.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Metropolis';
     font-weight: 700;
     src: local('Metropolis-Bold'),
-    url('./fonts/Metropolis-Bold.woff2') format('woff2'),
-    url('./fonts/Metropolis-Bold.woff') format('woff'),
-    url('./fonts/Metropolis-Bold.ttf') format('truetype');
+    url('../fonts/Metropolis-Bold.woff2') format('woff2'),
+    url('../fonts/Metropolis-Bold.woff') format('woff'),
+    url('../fonts/Metropolis-Bold.ttf') format('truetype');
 }
 
 *{margin:0; padding:0; box-sizing:border-box;}
@@ -60,7 +60,7 @@ input[type="password"] {height:40px; border:1px solid #c8c8c8; color:#999; backg
 input[type="text"] {width:278px; background:#fff; -webkit-appearance: none; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none;}
 input[type="number"] {-moz-appearance:textfield;}
 input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {-webkit-appearance:none; margin:0}
-select{padding:0 35px 0 15px; height:40px; font-size:16px; line-height:38px; color:#000; background:url('./images/selectD_open.gif') no-repeat right 15px top 50% #fff; border:1px solid #a8a8a8; -webkit-appearance: none; appearance:none; -moz-appearance:none;}
+select{padding:0 35px 0 15px; height:40px; font-size:16px; line-height:38px; color:#000; background:url('../images/selectD_open.gif') no-repeat right 15px top 50% #fff; border:1px solid #a8a8a8; -webkit-appearance: none; appearance:none; -moz-appearance:none;}
 select::-ms-expand{display:none}
 select::-ms-value{color:inherit; background:none}
 textarea{padding:10px; vertical-align:middle; background:#fff; border:1px solid #c8c8c8; font-family:"Noto Sans KR", "맑은 고딕", "Malgun Gothic", sans-serif; font-weight:400; color:#000; font-size:16px; letter-spacing:-0.6px; -webkit-appearance: none; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; border-radius:0}
@@ -117,9 +117,9 @@ html.lock body{height:100%; overflow:hidden}
 .workList .listDiv .list .txtArea .kindD{display:none}
 .workList .listDiv .list.maintenance .imgArea{font-size:18px; line-height:200px; color:#fff; text-align:center; background:#929292}
 .workList .listDiv .list .dimd{display:none; position:absolute; top:0; left:0; z-index:1; width:100%; height:100%}
-.workList .listDiv .list .dimd:after{content:'View project'; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); padding-bottom:24px; width:96px; height:40px; font-weight:700; font-size:16px; color:#fff; text-align:center; background: url('./images/moreBtn.png') no-repeat center bottom; z-index:1}
+.workList .listDiv .list .dimd:after{content:'View project'; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); padding-bottom:24px; width:96px; height:40px; font-weight:700; font-size:16px; color:#fff; text-align:center; background: url('../images/moreBtn.png') no-repeat center bottom; z-index:1}
 .workList .listDiv .list.ing .dimd:after{content:'작업중'; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:60px; height:60px; font-size:18px; line-height:60px; color:#fff; text-align:center; z-index:1; background:none}
-.workList .listDiv .list:hover .txtArea .tit span{background:url('./images/tit_bg.gif') repeat-x bottom 3px left}
+.workList .listDiv .list:hover .txtArea .tit span{background:url('../images/tit_bg.gif') repeat-x bottom 3px left}
 
 .dimdBg{display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0, 0, 0, 0.6); z-index:9}
 .viewPop{display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); width:1400px; z-index:10; word-break:keep-all}
@@ -127,8 +127,8 @@ html.lock body{height:100%; overflow:hidden}
 .viewPop .popCon .titArea{position:relative; margin:0 auto 70px; padding-bottom:33px; width:calc(100% - 80px); width:-webkit-calc(100% - 80px); border-bottom:1px solid #c8c8c8}
 .viewPop .popCon .titArea .tit span{font-family:'Metropolis', 'Noto Sans KR'; font-weight:500; font-size:26px; line-height:25px; color:#333; word-break:keep-all}
 .viewPop .popCon .titArea .link{position:absolute; top:80px; left:0; width:100%; text-align:left;}
-.viewPop .popCon .titArea .link a{display:inline-block; position:relative; padding-right:16px; font-weight:700; font-size:20px; line-height:22px; color:#555; background:url('./images/link_icon.png') no-repeat right 1px top 3px}
-.viewPop .popCon .titArea .link b{display:none; padding-left:34px; font-family:'Noto Sans KR'; font-weight:400; font-size:15px; line-height:22px; color:#d84c4c; background:url('./images/noLink.png') no-repeat left 1px center}
+.viewPop .popCon .titArea .link a{display:inline-block; position:relative; padding-right:16px; font-weight:700; font-size:20px; line-height:22px; color:#555; background:url('../images/link_icon.png') no-repeat right 1px top 3px}
+.viewPop .popCon .titArea .link b{display:none; padding-left:34px; font-family:'Noto Sans KR'; font-weight:400; font-size:15px; line-height:22px; color:#d84c4c; background:url('../images/noLink.png') no-repeat left 1px center}
 .viewPop .popCon .titArea .link.on{text-align:center}
 .viewPop .popCon .titArea .link.on a{display:none}
 .viewPop .popCon .titArea .link.on b{display:inline-block; font-family:'Noto Sans KR'; font-weight:500; font-size:14px; color:#e64949;}
@@ -142,15 +142,15 @@ html.lock body{height:100%; overflow:hidden}
 .viewPop .popCon .conArea .etcArea .kind:first-child{margin-left:0}
 .viewPop .popCon .conArea .etcArea .kind .title{font-family:'Noto Sans KR'; font-weight:400; font-size:19px; line-height:20px; color:#333}
 .viewPop .popCon .conArea .etcArea .kind .proListD{margin-top:20px}
-.viewPop .popCon .conArea .etcArea .kind .proListD ul li{position:relative; padding-left:14px; margin-top:8px; font-family:'Noto Sans KR'; font-weight:300; font-size:17px; line-height:20px; color:#666; background:url('./images/dot3x3.gif') no-repeat left 9px}
+.viewPop .popCon .conArea .etcArea .kind .proListD ul li{position:relative; padding-left:14px; margin-top:8px; font-family:'Noto Sans KR'; font-weight:300; font-size:17px; line-height:20px; color:#666; background:url('../images/dot3x3.gif') no-repeat left 9px}
 .viewPop .popCon .conArea .etcArea .kind .proListD ul li:first-child{margin-top:0}
 .viewPop .popCon .conArea .etcArea .kind .proListD ul li:after{content:''; display:block; clear:both}
 .viewPop .popCon .conArea .etcArea .kind .proListD ul li p{float:left; width:170px}
 .viewPop .popCon .conArea .etcArea .kind .proListD ul li a, .viewPop .popCon .conArea .etcArea .kind .proListD ul li span{float:left; margin-left:30px; color:#333}
-.viewPop .popCon .conArea .etcArea .kind .proListD ul li a{padding-left:34px; font-family:'Metropolis'; font-weight:400; background:url('./images/link_icon2.png') no-repeat left 1px center}
-.viewPop .popCon .conArea .etcArea .kind .proListD ul li a.no{pointer-events:none; font-family:'Noto Sans KR'; font-weight:300; color:#d84c4c; background:url('./images/noLink.png') no-repeat left 1px center}
+.viewPop .popCon .conArea .etcArea .kind .proListD ul li a{padding-left:34px; font-family:'Metropolis'; font-weight:400; background:url('../images/link_icon2.png') no-repeat left 1px center}
+.viewPop .popCon .conArea .etcArea .kind .proListD ul li a.no{pointer-events:none; font-family:'Noto Sans KR'; font-weight:300; color:#d84c4c; background:url('../images/noLink.png') no-repeat left 1px center}
 .viewPop .popCon .conArea .etcArea .kind .proListD ul li span{position:relative; font-weight:400}
-.viewPop .popCon .xBtn{position:absolute; top:35px; right:40px; width:26px; height:26px; background:url('./images/viewPop_close.png') no-repeat; background-size:cover}
+.viewPop .popCon .xBtn{position:absolute; top:35px; right:40px; width:26px; height:26px; background:url('../images/viewPop_close.png') no-repeat; background-size:cover}
 .viewPop.etc .popCon .titArea{margin:0 auto 30px}
 .viewPop.etc .popCon .conArea{height:calc(100% - 91px); height:-webkit-calc(100% - 91px);}
 
@@ -193,8 +193,8 @@ html.lock body{height:100%; overflow:hidden}
 	.viewPop .popCon .titArea .tit{display:table; padding-right:35px; height:36px}
 	.viewPop .popCon .titArea .tit span{display:table-cell; vertical-align:middle; font-size:15px; line-height:18px; color:#000;}
 	.viewPop .popCon .titArea .link{top:65px;}
-	.viewPop .popCon .titArea .link a{font-size:14px; line-height:1; background:url('./images/m_link_icon.png') no-repeat right 1px center; background-size:7px 12px}
-	.viewPop .popCon .titArea .link b{padding-left:24px; line-height:16px; background:url('./images/noLink.png') no-repeat left 1px center; background-size:16px}
+	.viewPop .popCon .titArea .link a{font-size:14px; line-height:1; background:url('../images/m_link_icon.png') no-repeat right 1px center; background-size:7px 12px}
+	.viewPop .popCon .titArea .link b{padding-left:24px; line-height:16px; background:url('../images/noLink.png') no-repeat left 1px center; background-size:16px}
 	.viewPop .popCon .conArea{padding:0 30px 0; height:calc(100% - 99px); height:-webkit-calc(100% - 99px)}
 	.viewPop .popCon .conArea:after{height:26px}
 	.viewPop .popCon .conArea .imgArea{width:100%}
@@ -203,9 +203,9 @@ html.lock body{height:100%; overflow:hidden}
 	.viewPop .popCon .conArea .etcArea .kind .proListD ul li{padding-left:9px; font-size:12px; line-height:16px; background:none}
 	.viewPop .popCon .conArea .etcArea .kind .proListD ul li:before{content:''; position:absolute; top:7px; left:0; width:2px; height:2px; background:#767676}
 	.viewPop .popCon .conArea .etcArea .kind .proListD ul li p{width:120px}
-	.viewPop .popCon .conArea .etcArea .kind .proListD ul li a{margin-left:20px; padding-left:24px; background:url('./images/link_icon2.png') no-repeat left 1px center; background-size:16px}
-	.viewPop .popCon .conArea .etcArea .kind .proListD ul li a.no{margin-left:20px; padding-left:24px; background:url('./images/noLink.png') no-repeat left 1px center; background-size:16px}
-	.viewPop .popCon .xBtn{top:23px; right:30px; width:20px; height:20px; background:url('./images/m_viewPop_close.png') no-repeat; background-size:cover}
+	.viewPop .popCon .conArea .etcArea .kind .proListD ul li a{margin-left:20px; padding-left:24px; background:url('../images/link_icon2.png') no-repeat left 1px center; background-size:16px}
+	.viewPop .popCon .conArea .etcArea .kind .proListD ul li a.no{margin-left:20px; padding-left:24px; background:url('../images/noLink.png') no-repeat left 1px center; background-size:16px}
+	.viewPop .popCon .xBtn{top:23px; right:30px; width:20px; height:20px; background:url('../images/m_viewPop_close.png') no-repeat; background-size:cover}
 	.viewPop.etc .popCon .titArea{margin:0 auto 20px}
 	.viewPop.etc .popCon .conArea{height:calc(100% - 69px); height:-webkit-calc(100% - 69px);}
 }
