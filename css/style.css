@@ -124,7 +124,7 @@ html.lock body{height:100%; overflow:hidden}
 .dimdBg{display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0, 0, 0, 0.6); z-index:9}
 .viewPop{display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); width:1400px; z-index:10; word-break:keep-all}
 .viewPop .popCon{position:relative; padding:35px 0 0; margin:0 auto; background:#fff; height:100%}
-.viewPop .popCon .titArea{position:relative; margin:0 auto 70px; padding-bottom:34px; width:calc(100% - 80px); width:-webkit-calc(100% - 80px); border-bottom:1px solid #c8c8c8}
+.viewPop .popCon .titArea{position:relative; margin:0 auto 70px; padding-bottom:33px; width:calc(100% - 80px); width:-webkit-calc(100% - 80px); border-bottom:1px solid #c8c8c8}
 .viewPop .popCon .titArea .tit span{font-family:'Metropolis', 'Noto Sans KR'; font-weight:500; font-size:26px; line-height:25px; color:#333; word-break:keep-all}
 .viewPop .popCon .titArea .link{position:absolute; top:80px; left:0; width:100%; text-align:left;}
 .viewPop .popCon .titArea .link a{display:inline-block; position:relative; padding-right:16px; font-weight:700; font-size:20px; line-height:22px; color:#555; background:url('../images/link_icon.png') no-repeat right 1px top 3px}
@@ -132,7 +132,7 @@ html.lock body{height:100%; overflow:hidden}
 .viewPop .popCon .titArea .link.on{text-align:center}
 .viewPop .popCon .titArea .link.on a{display:none}
 .viewPop .popCon .titArea .link.on b{display:inline-block; font-family:'Noto Sans KR'; font-weight:500; font-size:14px; color:#e64949;}
-.viewPop .popCon .conArea{padding:0 40px 0; height:calc(100% - 130px); height:-webkit-calc(100% - 130px); text-align:center; overflow-y:auto}
+.viewPop .popCon .conArea{padding:0 40px 0; height:calc(100% - 131px); height:-webkit-calc(100% - 130px); text-align:center; overflow-y:auto}
 .viewPop .popCon .conArea:after{content:''; display:block; position:relative; width:100%; height:40px; background:#fff}
 .viewPop .popCon .conArea .imgArea{width:calc(100% + 17px); width:-webkit-calc(100% + 17px)}
 .viewPop .popCon .conArea .imgArea img{width:100%}
