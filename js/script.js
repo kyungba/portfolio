@@ -114,12 +114,10 @@ var script = (function(){
 							$(".viewPop").height("");
 							$(".viewPop .conArea .etcArea").html($(this).find(".kindD").html());
 						}
-						if($.trim($(this).data("img-size")) != ""){
-							if(parseInt(_winH * 0.9) % 2 == 1){
-								$(".viewPop").height(parseInt(_winH * 0.9) - 1);
-							}else{
-								$(".viewPop").height(parseInt(_winH * 0.9));
-							}
+						if(parseInt(_winH * 0.9) % 2 == 1){
+							$(".viewPop").height(parseInt(_winH * 0.9) - 1);
+						}else{
+							$(".viewPop").height(parseInt(_winH * 0.9));
 						}
 					}
 				});
