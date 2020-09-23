@@ -85,10 +85,11 @@ var script = (function(){
 				$(this).click(function(){
 					$(".dimdBg").stop(true, true).fadeIn(300);
 					$(".viewPop").stop(true, true).fadeIn(300);
+					$(".viewPop").addClass("loading");
 					scrollT = $(window).scrollTop();
 					$("html").addClass("lock");
 					if(!$(".viewPop").hasClass($(this).attr("id"))){
-						$(".viewPop").removeClass().addClass("viewPop").addClass($(this).attr("id"));
+						$(".viewPop").removeClass().addClass("viewPop loading").addClass($(this).attr("id"));
 						$(".viewPop .titArea .tit span").text($(this).find(".txtArea .tit").text());
 						if(!$(this).hasClass("etc")){
 							$(".viewPop .titArea .link").show();
@@ -106,7 +107,11 @@ var script = (function(){
 							$(".viewPop .conArea .imgArea").empty();
 							$(".viewPop").height("");
 							for (var i=0; i < $(this).data("img-size"); i++){
-								$(".viewPop .conArea .imgArea").append('<img src="https://raw.githack.com/kyungba/portfolio/master/images/project_view_'+$(this).attr("id")+i+'.jpg" alt="" />');
+								$(".viewPop .conArea .imgArea").append('<img src="https://raw.githack.com/kyungba/portfolio/master/images/project_view_'+$(this).attr("id")+i+'.jpg" alt="" />').find("img").load(function(){
+									if($(".viewPop").hasClass("loading")){
+										$(".viewPop").removeClass("loading");
+									}
+								});
 							}
 						}else{
 							$(".viewPop .titArea .link").hide();
