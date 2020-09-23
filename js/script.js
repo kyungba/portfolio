@@ -106,7 +106,7 @@ var script = (function(){
 							$(".viewPop .conArea .imgArea").empty();
 							$(".viewPop").height("");
 							for (var i=0; i < $(this).data("img-size"); i++){
-								$(".viewPop .conArea .imgArea").append('<img src="./images/project_view_'+$(this).attr("id")+i+'.jpg" alt="" />');
+								$(".viewPop .conArea .imgArea").append('<img src="https://raw.githack.com/kyungba/portfolio/master/images/project_view_'+$(this).attr("id")+i+'.jpg" alt="" />');
 							}
 						}else{
 							$(".viewPop .titArea .link").hide();
