@@ -85,13 +85,12 @@ var script = (function(){
 				$(this).click(function(){
 					$(".dimdBg").stop(true, true).fadeIn(300);
 					$(".viewPop").stop(true, true).fadeIn(300);
-					$(".viewPop").addClass("loading");
 					scrollT = $(window).scrollTop();
 					$("html").addClass("lock");
 					if(!$(".viewPop").hasClass($(this).attr("id"))){
-						$(".viewPop").removeClass().addClass("viewPop loading").addClass($(this).attr("id"));
 						$(".viewPop .titArea .tit span").text($(this).find(".txtArea .tit").text());
 						if(!$(this).hasClass("etc")){
+							$(".viewPop").removeClass().addClass("viewPop loading").addClass($(this).attr("id"));
 							$(".viewPop .titArea .link").show();
 							if($(this).data("href") == "intra"){
 								if(!$(".viewPop .titArea .link").hasClass("on")){
@@ -114,6 +113,7 @@ var script = (function(){
 								});
 							}
 						}else{
+							$(".viewPop").removeClass().addClass("viewPop").addClass($(this).attr("id"));
 							$(".viewPop .titArea .link").hide();
 							$(".viewPop .conArea .imgArea").empty();
 							$(".viewPop").height("");
