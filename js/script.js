@@ -68,6 +68,10 @@ var script = (function(){
 						$(".viewPop").height(parseInt(_winH * 0.9));
 					}
 				}
+
+				$(".workList .listDiv .list").each(function(){
+					$(this).find(".dimd").css("left",$(this).outerWidth())
+				});
 			});$(window).resize();
 		},
 		scrollEvt : function(){
