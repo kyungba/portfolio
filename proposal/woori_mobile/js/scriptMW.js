@@ -1,0 +1,12 @@
+$(function(){
+	$('.loginBtn').click(function(){
+		$('.loginBtn').hide();
+		$('.myArea').show();
+		$('.bottomImg').css('margin-top','0');
+	});
+	$('.return').click(function(){
+		$('.loginBtn').show();
+		$('.myArea').hide();
+		$('.bottomImg').css('margin-top','30px');
+	});
+});

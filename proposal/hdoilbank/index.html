@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <title> TypeA </title>
+   <!-- 공통적용헤더정보 -->
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+ <!-- 공통적용헤더정보 -->
+ <script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+ <script type="text/javascript" src="./greensock/TweenMax.js"></script>
+ <!-- <script type="text/javascript" src="./js/jquery.lazylinepainter-1.7.0.js"></script> -->
+ <script type="text/javascript" src="./js/script.js"></script>
+ <link rel="stylesheet" type="text/css" href="./css/style.css" media="all" />
+  <style type="text/css">
+	video {
+		position: fixed; left:50%; transform:translate(-50%, 0); bottom: 0;
+		min-width: 100%; min-height: 100%;
+		width: auto; height: auto; z-index: -100;
+		background: url(polina.jpg) no-repeat;
+		background-size: cover;
+	}
+  </style>
+
+ </head>
+
+<body>
+	<div id="wrap">
+		<div id="section_container">
+			<div id="lazyIcon"></div>
+			<!-- <div class="skewIcon"><img src="./images/visual_polygon.png" alt="" /></div> -->
+			
+			<!-- family -->
+			<div class="family_cont" style="display:none;">
+				<p class="logo"><img src="./images/family_logo.png" alt="" /></p>
+				<p class="xbtn"><img src="./images/family_xbtn.png" alt="" /></p>
+				<a href="javascript:" class="step1"></a>
+				<a href="javascript:" class="step2" style="display:none;"></a>
+				<a href="javascript:" class="step3" style="display:none;"></a>
+				<a href="javascript:" class="step4" style="display:none;"></a>
+				<a href="javascript:" class="step5" style="display:none;"></a><!-- 2017-09-20 추가 -->
+			</div>
+			<!-- //family -->
+			<!-- sticky gnb -->
+			<div class="sticky_gnb">
+				<a href="../../index.html" class="logo"><img src="./images/sticky_logo.png" alt="" /></a>
+				<div class="menu"><img src="./images/sticky_menu.png" alt="" /></div>
+				<a href="javascript:" class="icon1"><img src="./images/sticky_icon1.jpg" alt="" /></a>
+				<a href="javascript:" class="icon2"><img src="./images/sticky_icon2.png" alt="" /></a>
+			</div>
+			<!-- //sticky gnb -->
+			<!-- visual section -->
+			<div class="section">
+				<a href="javascript:" class="gnb_over" style="display:none;">
+					<div class="logo"><img src="./images/visual_logo_on.png" alt="" /></div>
+					<div class="btn"><img src="./images/gnb_over_btn.jpg" alt="" /></div>
+				</a>
+				<div class="gnb_area">
+					<a href="../../index.html" class="gnb_logo"><img src="./images/visual_logo.png" alt="" /></a>
+					<div class="gnb_menu">
+						<a href="javascript:" class="gnb_menu1"><img src="./images/visual_menu1.png" alt="" /></a>
+						<a href="javascript:" class="gnb_menu2"><img src="./images/visual_menu2.png" alt="" /></a>
+						<a href="javascript:" class="gnb_menu3"><img src="./images/visual_menu3.png" alt="" /></a>
+					</div>
+					<a href="javascript:" class="gnb_icon1"><img src="./images/visual_icon2.png" alt="" /></a>
+					<a href="javascript:" class="gnb_icon2"><img src="./images/visual_icon1.png" alt="" /></a>
+				</div>
+				<div class="visual_cont">
+					<div class="inner" style="height:100%;">
+						<p class="txt"><img src="./images/visual_txt.png" alt="" /></p>
+						<span class="ico_wheel"><img src="./images/ico_wheel.png" alt="" /></span>
+						<!-- <p class="line"><img src="./images/visual_line.png" alt="" /></p> -->
+						<!-- <a href="javascript:" class="playBt"><img src="./images/visual_play.png" alt="" /></a> -->
+					</div>
+					<div class="tab default">
+						<div class="tab_btn">
+							<!-- <p class="black"></p> -->
+							<!-- <p class="black"></p> -->
+							<a href="javascript:" class="btn"><img src="./images/visual_tab1_on.png" alt="" /></a>
+							<a href="javascript:" class="btn"><img src="./images/visual_tab2_on.png" alt="" /></a>
+							<a href="javascript:" class="btn"><img src="./images/visual_tab3_on.png" alt="" /></a>
+							<!-- <a href="javascript:"><img src="./images/visual_tab4.png" alt="" /></a> -->
+						</div>
+						<div class="tab_contents">
+							<div class="content">
+								<div class="txt_box" id="contents1" style="">
+									<!-- <p class="txt1"><img src="./images/content1_txt1.png" alt="" /></p> -->
+									<!-- <p class="txt2"><img src="./images/content1_txt2.png" alt="" /></p> -->
+									<div class="tab_inner">
+										<div class="intro_txt">
+											<p class="introTxt1">숫자로 보는</p>
+											<p class="introTxt2">현대오일뱅크</p>
+										</div>
+										<div class="indicator">
+											<a href="javascript:" class="on"></a>
+											<a href="javascript:" class=""></a>
+											<a href="javascript:" class=""></a>
+											<a href="javascript:" class=""></a>
+										</div>
+									</div>
+									<a href="javascript:" class="leftBtn direcBtn"><img src="./images/tab_left_btn.png" alt="" /></a>
+									<a href="javascript:" class="rightBtn direcBtn"><img src="./images/tab_right_btn.png" alt="" /></a>
+									<div class="tab_inner_img" style="display:none; background:url('./images/tab1_bgImg1.jpg') no-repeat center center; background-size:cover;"></div>
+									<div class="tab_inner_img" style="display:none; background:url('./images/tab1_bgImg2.jpg') no-repeat center center; background-size:cover;"></div>
+									<div class="tab_inner_img" style="display:none; background:url('./images/tab1_bgImg3.jpg') no-repeat center center; background-size:cover;"></div>
+									<div class="tab_inner_img" style="display:none; background:url('./images/tab1_bgImg4.jpg') no-repeat center center; background-size:cover;"></div>
+								</div>
+								<div class="txt_box" id="contents2" style="">
+									<!-- <p class="txt1"><img src="./images/content2_txt1.png" alt="" /></p> -->
+									<!-- <p class="txt2"><img src="./images/content2_txt2.png" alt="" /></p> -->
+									<div class="tab_inner">
+										<div class="intro_txt">
+											<p class="introTxt1"><img src="./images/tab2_intro_txt.png" alt="" /></p>
+										</div>
+										<div class="indicator">
+											<a href="javascript:" class="on"></a>
+											<a href="javascript:" class=""></a>
+											<a href="javascript:" class=""></a>
+											<a href="javascript:" class=""></a>
+										</div>
+									</div>
+									<div class="line" style=""></div>
+									<div class="tab_inner_img" style="display:none; background:url('./images/tab2_bgImg1.png') no-repeat center center; background-size:cover;"></div>
+									<div class="tab_inner_img" style="left:100%; background:url('./images/tab2_bgImg2.png') no-repeat center center; background-size:cover;"></div>
+									<div class="tab_inner_img" style="left:100%; background:url('./images/tab2_bgImg3.png') no-repeat center center; background-size:cover;"></div>
+									<div class="tab_inner_img" style="left:100%; background:url('./images/tab2_bgImg4.png') no-repeat center center; background-size:cover;"></div>
+								</div>
+								<div class="txt_box" id="contents3" style="">
+									<!-- <p class="txt1"><img src="./images/content2_txt1.png" alt="" /></p> -->
+									<!-- <p class="txt2"><img src="./images/content2_txt2.png" alt="" /></p> -->
+									<div class="tab_inner">
+										<div class="intro_txt">
+											<p class="introTxt1"><img src="./images/tab3_intro_txt.png" alt="" /></p>
+										</div>
+										<div class="indicator">
+											<a href="javascript:" class="on"></a>
+											<a href="javascript:" class=""></a>
+											<a href="javascript:" class=""></a>
+											<a href="javascript:" class=""></a>
+										</div>
+									</div>
+									<a href="javascript:" class="leftBtn direcBtn"><img src="./images/tab_left_btn.png" alt="" /></a>
+									<a href="javascript:" class="rightBtn direcBtn"><img src="./images/tab_right_btn.png" alt="" /></a>
+									<div class="tab_inner_img" style="display:none; background:url('./images/tab3_bgImg1.jpg') no-repeat center center; background-size:cover;"></div>
+									<div class="tab_inner_img" style="display:none; background:url('./images/tab3_bgImg2.jpg') no-repeat center center; background-size:cover;"></div>
+									<div class="tab_inner_img" style="display:none; background:url('./images/tab3_bgImg3.jpg') no-repeat center center; background-size:cover;"></div>
+									<div class="tab_inner_img" style="display:none; background:url('./images/tab3_bgImg4.jpg') no-repeat center center; background-size:cover;"></div>
+								</div>
+							</div>
+							<a href="javascript:" class="closeBt"><img src="./images/tabCon_close.png" alt="" /></a>
+						</div>
+					</div>
+					<video autoplay loop controls="false" id="myvideo">
+						<source  src="./visual_re.mp4" type="video/mp4">
+						video 요소를 지원하지 않는 브라우저입니다.
+					</video>
+				</div>
+				<a href="javascript:" class="familyBt"><span></span></a><!-- 2017-09-20 추가 -->
+				<a href="javascript:" class="playBt2"><img src="./images/play_bt2.png" alt="" /></a><!-- 2017-09-20 추가 -->
+				<div class="blackBg"></div>
+				<div class="blackBg1"></div>
+			</div>
+			<!-- //visual section -->
+
+			<!-- biz section -->
+			<div class="section">
+				<div class="bz_intro">
+					<div class="icon"><img src="./images/skewIcon2.png" alt="" /></div>
+					<div class="txt">
+						<img src="./images/biz_intro_txt.png" alt="" />
+					</div>
+				</div>
+				<div class="biz_cont">
+					<div class="float_box w70">
+						<a href="javascript:" class="img_cont c1 w60">
+							<div class="over"></div>
+							<p class="txt1">정유사업</p>
+							<p class="txt2">
+								하루 61만 배럴의 원유를 정제해 휘발유, 경유, 등유, 항공유 등<br />
+								석유 제품을 생산하고 있습니다
+							</p>
+						</a>
+						<a href="javascript:" class="img_cont c2 w40">
+							<p class="txt1 color000 left60">석유화학사업</p>
+							<p class="txt2 color333 left60">
+								연간 120만 톤 생산 규모의 혼합자일렌 설비, 140만 톤 생산 규모의<br />
+								방향족 설비로 석유화학 기초 원료를 생산하고 있습니다
+							</p>
+						</a>
+						<a href="javascript:" class="img_cont c4 w40">
+							<p class="txt1 ">제철화학사업</p>
+							<p class="txt2 ">
+								제철소와 정유시설의 부산물을 활용해 타이어 배합제,<br />
+								잉크의 원료 등을 생산하고 있습니다
+							</p>
+						</a>
+						<a href="javascript:" class="img_cont c5 w60">
+							<div class="over"></div>
+							<p class="txt1">오일터미널사업</p>
+							<p class="txt2">
+								업계 최초 상업용 유류저장시설인 울산신항 현대오일터미널은<br />
+								동남권역 최대의 물류기지 역할을 수행하고 있습니다
+							</p>
+						</a>
+					</div>
+					<div class="float_box w30">
+						<a href="javascript:" class="img_cont c3">
+							<div class="over"></div>
+							<p class="txt1 color000">윤활기유사업</p>
+							<p class="txt2 color333">
+								윤활기유 설비에 고도화 공정 잔사유를 투입해 친환경 그룹Ⅱ <br />
+								윤활기유 제품을 생산하고 윤활기유에 각종 첨가제를 혼합해<br />
+								자동차∙선박∙산업용 윤활유를 만듭니다
+							</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- //biz section -->
+
+			<!-- issue section -->
+			<div class="section wht_bg">
+				<div class="issue_intro"><!-- 2017-09-20 추가 -->
+					<div class="icon"><img src="./images/issue_intro_icon.png" alt="" /></div>
+					<div class="txt"><img src="./images/issue_intro_txt.png" alt="" /></div>
+				</div>
+				<div class="inner">
+					<!-- <div class="issue_bg"></div> -->
+					<!-- <p class="issue_tit"><img src="./images/issue_tit.png" alt="" /></p> -->
+					<a href="javascript:" class="issue_allBtn"><img src="./images/issue_allView.png" alt="" /></a>
+					<div class="issue_cont">
+						<a href="javascript:" class="issue_img issue_over">
+							<img src="./images/issue_img1_on.png" alt="" class="overImg" style="opacity:0; transform:scale(1);" />
+							<img src="./images/issue_img1.png" alt="" />
+						</a>
+						<a href="javascript:" class="issue_img"><img src="./images/issue_img2.png" alt="" /></a>
+						<a href="javascript:" class="issue_img"><img src="./images/issue_img3.png" alt="" /></a>
+						<a href="javascript:" class="issue_img"><img src="./images/issue_img4.png" alt="" /></a>
+					</div>
+					<div class="issue_cont2">
+						<!-- <a href="javascript:" class="issue_img issue_over">
+							<img src="./images/issue_img5_on.png" alt="" class="overImg" style="opacity:0; transform:scale(1);" />
+							<img src="./images/issue_img5.png" alt="" />
+						</a>
+						<a href="javascript:" class="issue_img"><img src="./images/issue_img6.png" alt="" /></a> -->
+						<a href="javascript:"><img src="./images/issue_txt.png" alt="" /></a><!-- 2017-09-20 추가 -->
+						<div class="btns"><!-- 2017-09-20 추가 -->
+							<a href="javascript:"><img src="./images/issue_btn_hover1.png" alt="" /></a>
+							<a href="javascript:"><img src="./images/issue_btn_hover2.png" alt="" /></a>
+							<a href="javascript:"><img src="./images/issue_btn_hover3.png" alt="" /></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //issue section -->
+
+			<!-- career section -->
+			<div class="section career">
+				<div class="career_intro"><!-- 2017-09-20 추가 -->
+					<div class="icon"><img src="./images/career_intro_icon.png" alt="" /></div>
+					<div class="txt"><img src="./images/career_intro_txt.png" alt="" /></div>
+				</div>
+				<div class="inner">
+					<!-- <p class="career_tit"><img src="./images/career_tit.png" alt="" /></p> -->
+					<div class="career_cont">
+						<div class="rollArea">
+							<a href="javascript:" class="txt" style="left:0;"><img src="./images/cRoll_txt1.png" alt="" /></a>
+							<a href="javascript:" class="txt" style="opacity:0;"><img src="./images/cRoll_txt2.png" alt="" /></a>
+							<p class="img" style="right:0;"><img src="./images/cRoll_img1.png" alt="" /></p>
+							<p class="img" style="opacity:0;"><img src="./images/cRoll_img2.png" alt="" /></p>
+							<div class="indi">
+								<a href="javascript:" class="on"></a>
+								<a href="javascript:" class=""></a>
+								<a href="javascript:"></a>
+							</div>
+						</div>
+						<a href="javascript:"><img src="./images/career_img1.png" alt="" /></a>
+						<a href="javascript:"><img src="./images/career_img2.png" alt="" /></a>
+						<a href="javascript:"><img src="./images/career_img3.png" alt="" /></a>
+						<!-- <a href="javascript:"><img src="./images/career_img4.png" alt="" /></a> -->
+					</div>
+				</div>
+			</div>
+			<!-- //career section -->
+
+			<div class="section footer">
+				<div class="inner">
+					<img src="./images/footer.gif" alt="" />
+				</div>
+			</div>
+
+			<div class="sideMenu"><!-- 2017-09-20 추가 -->
+				<a href="javascript:" class="bt1 on"></a>
+				<a href="javascript:" class="bt2"></a>
+				<a href="javascript:" class="bt3"></a>
+				<a href="javascript:" class="bt4"></a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

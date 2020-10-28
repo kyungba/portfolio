@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>두산공작기계 A Type</title>
+    <link rel="stylesheet" href="./css/style_mobile.css" />
+    <script type="text/javascript" src="./js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="./greensock/TweenMax.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#mobileWrap .contents .wrap").on("scroll", function(){
+                $("#mobileWrap .contents .wrap .btn-bi").css("top", $("#mobileWrap .contents .wrap").scrollTop() + 1050);
+
+                if(Math.abs(Math.floor($("#mobileWrap .contents .wrap").scrollTop())) >= 4100) {
+                    TweenMax.to($("#mobileWrap .contents .wrap .btn-bi"), 0.3, {opacity:0});
+                } else {
+                    TweenMax.to($("#mobileWrap .contents .wrap .btn-bi"), 0.3, {opacity:1});
+                }
+            });
+
+			$(".header .menu").click(function(){
+				TweenMax.to($(".gnb"), 0.3, {right:0});
+				$(".blackBg").fadeIn(300);
+			});
+			$(".gnb").click(function(){
+				TweenMax.to($(".gnb"), 0.3, {right:-540});
+				$(".blackBg").fadeOut(300);
+			});
+        })
+    </script>
+</head>
+
+<body>
+<div id="mobileWrap">
+    <div class="phone">
+        <img src="./images/phone_frame.png" alt="" />
+        <a href="javascript:" class="top"></a>
+    </div>
+    <div class="contents">
+		<div class="header">
+			<a href="../../index.html" class="logo"><img src="./images/logo_mobile.png" alt=""></a>
+			<a href="javascript:" class="menu"><img src="./images/gnb_mobile.png" alt=""></a>
+		</div>
+		<div class="gnb">
+			<a href="javascript:" class="closeBt"></a>
+		</div>
+
+        <div class="wrap">
+            <div class="container">
+            	<img src="./images/mobile_sub.jpg" alt="">
+            	
+            	<div class="blackBg"></div>
+            </div><!-- // container -->
+        </div><!-- // wrap -->
+    </div><!-- // contents -->
+</div>
+</body>
+</html>
