@@ -1,10 +1,18 @@
 var _winH;
 var script = (function(){
+	var device = '';
+	var browser = '';
 	return {
 		readyEvt : function(){
 			$(".workList .listDiv .list").each(function(){
 				$(this).find(".dimd").css("background", $(this).data("color"));
 			});
+
+			if($(".proposalList").size() > 0){
+				if(device != 'pc'){
+					$("#content").addClass("mob");
+				}
+			}
 		},
 		thumbHover : function (selector, cover) {
             var w, h, x, y, direction;
@@ -76,10 +84,12 @@ var script = (function(){
 		},
 		scrollEvt : function(){
 			$(window).scroll(function(){
-				if($(window).scrollTop() + $(window).height()/2 > $(".listDiv").offset().top){
-					$(".listDiv .list").each(function(q){
-						TweenMax.to($(".listDiv .list").eq(q), 0, {top:0, opacity:1, delay:q*0.15});
-					});
+				if($(".listDiv").size() > 0){
+					if($(window).scrollTop() + $(window).height()/2 > $(".listDiv").offset().top){
+						$(".listDiv .list").each(function(q){
+							TweenMax.to($(".listDiv .list").eq(q), 0, {top:0, opacity:1, delay:q*0.15});
+						});
+					}
 				}
 			});$(window).scroll();
 		},
@@ -138,12 +148,49 @@ var script = (function(){
 				$("html, body").scrollTop(scrollT);
 			});
 		},
+		checkEvt : function(){
+			if( /Android/i.test(navigator.userAgent)) {
+				device = 'android';
+			} else if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {   
+				return navigator.userAgent.match(/(iPhone|iPod)/g) ? device='ios' : device='ipad';
+			}else {
+				device = 'pc';
+			}
+			
+			var agent = navigator.userAgent.toLowerCase(),
+				name = navigator.appName;
+			  
+			if(name === 'Microsoft Internet Explorer' || agent.indexOf('trident') > -1 || agent.indexOf('edge/') > -1) {
+				browser = 'ie';
+				if(name === 'Microsoft Internet Explorer') { // IE old version (IE 10 or Lower)
+					agent = /msie ([0-9]{1,}[\.0-9]{0,})/.exec(agent);
+					browser += parseInt(agent[1]);
+				} else { // IE 11+
+					if(agent.indexOf('trident') > -1) { // IE 11
+						browser += 11;
+					} else if(agent.indexOf('edge/') > -1) { // Edge
+						browser = 'edge';
+					}
+				}
+			} else if(agent.indexOf('safari') > -1) { // Chrome or Safari
+				if(agent.indexOf('opr') > -1) { // Opera
+					browser = 'opera';
+				} else if(agent.indexOf('chrome') > -1) { // Chrome
+					browser = 'chrome';
+				} else { // Safari
+					browser = 'safari';
+				}
+			} else if(agent.indexOf('firefox') > -1) { // Firefox
+				browser = 'firefox';
+			}
+		},
 	}
 })();
 
 
 
 $(document).ready(function(){
+	script.checkEvt();
 	script.readyEvt();
 	script.resizeEvt();
 	script.scrollEvt();

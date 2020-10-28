@@ -91,8 +91,16 @@ th, b, strong{font-weight:normal}
 html.lock body{height:100%; overflow:hidden}
 #wrap{}
 #content{padding:80px 0}
+#content.mob{padding:0}
+#content.mob .errorT{display:table; padding:0 20px; width:100%; height:100vh; background:#f6f6f6; word-break:keep-all}
+#content.mob .errorT p{display:table-cell; vertical-align:middle; text-align:center; font-size:15px; line-height:22px; color:#d84c4c}
+#content.mob .workList{display:none}
+.errorT{display:none}
 .workList{margin:0 auto; width:1160px}
-.workList .title{font-weight:700; font-size:25px; color:#000; text-align:left}
+.workList .title{position:relative; font-weight:700; font-size:25px; color:#000; text-align:left}
+.workList .title .other{position:absolute; top:10px; right:0; padding:0 9px; height:25px; font-size:13px; line-height:26px; color:#555; border:1px solid #555; border-radius:20px; transition:color 0.4s ease, border 0.4s ease;}
+.workList .title .other:hover{color:#f22867; border:1px solid #f22867}
+.workList .notice{margin-top:15px; font-family:'Noto Sans KR'; font-weight:500; font-size:15px; line-height:22px; color:#d84c4c}
 .workList .listDiv{margin-top:50px}
 .workList .listDiv:after{content:''; display:block; clear:both}
 .workList .listDiv .list{position:relative; top:100px; opacity:0; float:left; margin-left:40px; width:360px; height:352px; border:1px solid #d0d0d0; border-radius:10px; overflow:hidden; transition:top 0.6s ease, opacity 0.6s ease; cursor:pointer}
@@ -120,6 +128,13 @@ html.lock body{height:100%; overflow:hidden}
 .workList .listDiv .list .dimd:after{content:'View project'; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); padding-bottom:24px; width:96px; height:40px; font-weight:700; font-size:16px; color:#fff; text-align:center; background: url('../images/moreBtn.png') no-repeat center bottom; z-index:1}
 .workList .listDiv .list.ing .dimd:after{content:'작업중'; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:60px; height:60px; font-size:18px; line-height:60px; color:#fff; text-align:center; z-index:1; background:none}
 .workList .listDiv .list:hover .txtArea .tit span{background:url('../images/tit_bg.gif') repeat-x bottom 3px left}
+.workList .proposalList{margin-top:50px}
+.workList .proposalList:after{content:''; display:block; clear:both}
+.workList .proposalList .list{float:left; width:50%; position:relative}
+.workList .proposalList .list:nth-child(n+3){margin-top:20px}
+.workList .proposalList .list a{display:inline-block; position:relative; line-height:16px; padding:4px 0 2px 34px; background:url('../images/link_icon2.png') no-repeat left 1px center}
+.workList .proposalList .list a:after{content:''; position:absolute; bottom:-2px; left:34px; width:0; height:2px; background:#555; transition:width 0.4s cubic-bezier(0.55, 0, 0.1, 1), opacity 0.4s cubic-bezier(0.55, 0, 0.1, 1)}
+.workList .proposalList .list a:hover:after{width:cacl(100% - 34px); width:-webkit-calc(100% - 34px); opacity:1}
 
 .dimdBg{display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0, 0, 0, 0.6); z-index:9}
 .viewPop{display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); width:1400px; z-index:10; word-break:keep-all}
@@ -190,8 +205,11 @@ html.lock body{height:100%; overflow:hidden}
 	html.lock body{position:fixed; width:100%; height:100%; overflow:visible}
 	html.lock #wrap{position:fixed; width:100%; height:100%}
 	#content{padding:50px 0}
+	#content.mob .errorT{padding:0 5%}
+	#content.mob .errorT p{font-size:13px; line-height:20px}
 	.workList{width:90%}
 	.workList .title{font-size:20px;}
+	.workList .title .other{top:10px; font-size:12px;}
 	.workList .listDiv{margin-top:30px}
 	.workList .listDiv .list{margin-left:20px; width:calc(50% - 10px); width:-webkit-calc(50% - 10px); height:auto}
 	.workList .listDiv .list:nth-child(3n-2){margin-left:20px}
