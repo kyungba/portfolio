@@ -197,27 +197,17 @@ $(function () {
 		if (E.detail) {
 		}else{
 			delta = E.wheelDelta;
-			deltaY = E.deltaY
-			if(delta == 120){
+			if(delta > 0){
 				//위
 				if(sectionN == 1){
 					if(!sectionMove){
-						if($("#wrap .mainTabCon .oneD .listDiv .list:first").offset().top == parseInt($("#wrap .mainTabCon .oneD").css("padding-top").split("p")[0])){
-							sectionScrollN = 0;
-						}else{
-							sectionScrollN = 1;
-						}
-
 						if(sectionScrollN == 0){
+							console.log(111)
 							if(!sectionScrollMove){
 								sectionScrollMove = true;
 								sectionMove = true;
 								$("#wrap .pagiNavi .bar span").eq(1).removeClass("on");
 								$("#wrap .pagiNavi .text span").eq(1).removeClass("on");
-								/*
-								$(".header .logo").removeClass("on");
-								$(".utill").removeClass("on");
-								$(".hamburger").removeClass("on");*/
 								TweenMax.to($("#wrap .mainV"), 0.6, {top:"0"});
 								TweenMax.to($("#wrap .mainTabCon"), 0.6, {top:"100%", onComplete:function(){
 									sectionMove = false;
@@ -286,7 +276,7 @@ $(function () {
 						}
 					}
 				}
-			}else if(delta == -120){
+			}else if(delta < 0){
 				//아래
 				if(sectionN == 0){
 					if(!sectionMove){
