@@ -194,7 +194,7 @@ $(function () {
 			}else{
 				delta = E.wheelDelta;
 				deltaY = E.deltaY
-				if(delta == 120){
+				if(delta > 0){
 					if(leftN == 2){
 						headFix = true;
 						TweenMax.to($(".leftDiv .section3"), 0.6, {top:"100%", delay:0.6, ease:Power3.easeOut});
@@ -221,7 +221,7 @@ $(function () {
 						$(".leftDiv .indicator span").removeClass("on");
 						$(".leftDiv .indicator span").eq(0).addClass("on");
 					}
-				}else if(delta == -120){
+				}else if(delta < 0){
 					if(leftN == 0){
 						headFix = true;
 						TweenMax.to($(".leftDiv .section1"), 0.6, {top:"-100%", delay:0.6, ease:Power3.easeOut});
