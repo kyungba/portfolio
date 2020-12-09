@@ -7,18 +7,36 @@
     <style>
        *{box-sizing:border-box}
        body:after{content:''; display:block; clear:both}
-        input{float:left; width:49%; margin-left:2%; box-sizing:border-box}
-        input:nth-child(2n-1){margin-left:0; clear:both}
-        input:nth-child(n+3){margin-top:20px}
+        div{float:left; width:49%; margin-left:2%}
+        div input{width:100%}
+        div:nth-child(2n-1){margin-left:0; clear:both}
+        div:nth-child(n+3){margin-top:20px}
     </style>
 </head>
 <body>
-    <input type="text" />
-    <input type="number" />
-    <input type="text" style="ime-mode:disabled" />
-    <input type="email" />
-    <input type="date" />
-    <input type="tel" />
-    <input type="url" />
+    <div>
+        <p>text</p>
+        <input type="text"/>
+    </div>
+    <div>
+        <p>text : ime-mode</p>
+        <input type="text" style="-ms-ime-mode:disabled; ime-mode:disabled" />
+    </div>
+    <div>
+        <p>number</p>
+        <input type="number" />
+    </div>
+    <div>
+        <p>tel</p>
+        <input type="tel" />
+    </div>
+    <div>
+        <p>email</p>
+        <input type="email" />
+    </div>
+    <div>
+        <p>url</p>
+        <input type="url" />
+    </div>
 </body>
 </html>
