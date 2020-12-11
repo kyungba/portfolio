@@ -6,10 +6,13 @@
     <script type="text/javascript" src="./js/jquery-1.12.4.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0,viewport-fit=cover,target-densitydpi=medium-dpi" />
     <style>
+       html.lock{position:fixed; top:0; left:0; width:100%; height:100%; overflow:hidden}
+       html.lock body{position:fixed; height:100%; overflow:hidden}
+       html.lock .wrap{position:fixed; width:100%; height:100%; overflow:hidden}
        *{box-sizing:border-box}
-       body{}
-       body.lock{height:100%; overflow:hidden}
-       .wrap{position:relative}
+       body{margin:0; padding:0}
+       body.lock{overflow:hidden}
+       .wrap{position:relative; height:100%}
        .pop-open{position:fixed; bottom:20px; left:5%; display:block; width:90%; height:40px; background:#000; text-align:center; line-height:40px; color:#fff; text-decoration:none}
        p{margin:0 0 10px 0}
        .list-div:after{content:''; display:block; clear:both}
@@ -17,8 +20,13 @@
        .list-div div input, .list-div div select{width:100%; height:22px}
        .list-div div:nth-child(2n-1){margin-left:0; clear:both}
        .list-div div:nth-child(n+3){margin-top:20px}
-       .layer-pop{display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); width:200px; height:300px; background:#fff; z-index:3; overflow-y:auto}
-       .dimd-bg{display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0, 0, 0, 0.3); z-index:2}
+       .name1{width:100%; height:500px; background:#ddd}
+       .name2{width:100%; height:500px; background:#fff}
+       .name3{width:100%; height:500px; background:yellow}
+       .layer-pop{display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); width:200px; height:300px; z-index:3}
+       .layer-pop .pop-con{padding:20px 15px; width:100%; height:100%; overflow-y:auto; background:#fff}
+       .layer-pop .close{position:absolute; top:-30px; right:-30px; width:30px; height:30px; background:#000}
+       .dimd-bg{display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0, 0, 0, 0.6); z-index:2}
     </style>
     <script>
         $(function(){
@@ -26,230 +34,242 @@
                 $(".layer-pop").stop(true, true).fadeIn(300);
                 $(".dimd-bg").stop(true, true).fadeIn(300);
                 $("body").addClass("lock")
+                $("body").height($(window).height())
+            })
+
+            $(".layer-pop .close").click(function(){
+                $(".layer-pop").stop(true, true).fadeOut(300);
+                $(".dimd-bg").stop(true, true).fadeOut(300);
+                $("body").removeClass("lock");
+                $("body").height("")
             })
         })
-
     </script>
 </head>
 <body>
 <div class="wrap">
     <a href="javascript:" class="pop-open">팝업열기</a>
     <div class="layer-pop">
-        가<br/>나<br/>다<br/>라<br/>마<br/>바<br/>사<br/>가<br/>나<br/>다<br/>라<br/>마<br/>바<br/>사<br/>가<br/>나<br/>다<br/>라<br/>마<br/>바<br/>사<br/>가<br/>나<br/>다<br/>라<br/>마<br/>바<br/>사<br/>가<br/>나<br/>다<br/>라<br/>마<br/>바<br/>사<br/>가<br/>나<br/>다<br/>라<br/>마<br/>바<br/>사<br/>가<br/>나<br/>다<br/>라<br/>마<br/>바<br/>사<br/>
+        <div class="pop-con">가<br/>나<br/>다<br/>라<br/>마<br/>바<br/>사<br/>가<br/>나<br/>다<br/>라<br/>마<br/>바<br/>사<br/>가<br/>나<br/>다<br/>라<br/>마<br/>바<br/>사<br/>가<br/>나<br/>다<br/>라<br/>마<br/>바<br/>사<br/>가<br/>나<br/>다<br/>라<br/>마<br/>바<br/>사<br/>가<br/>나<br/>다<br/>라<br/>마<br/>바<br/>사<br/>가<br/>나<br/>다<br/>라<br/>마<br/>바<br/>사<br/>
+        </div>
+        <a href="javascript:" class="close"></a>
     </div>
     <p class="dimd-bg"></p>
-    <div class="list-div">
-        <div>
-            <p>text</p>
-            <input type="text"/>
-        </div>
-        <div>
-            <p>text : ime-mode</p>
-            <input type="text" style="-ms-ime-mode:disabled; ime-mode:disabled"/>
-        </div>
-        <div>
-            <p>number</p>
-            <input type="number"/>
-        </div>
-        <div>
-            <p>tel</p>
-            <input type="tel"/>
-        </div>
-        <div>
-            <p>email</p>
-            <input type="email"/>
-        </div>
-        <div>
-            <p>url</p>
-            <input type="url"/>
-        </div>
-        <div>
-            <p>date</p>
-            <input type="date"/>
-        </div>
-        <div>
-            <p>time</p>
-            <input type="time"/>
-        </div>
-        <div>
-            <p>셀렉트박스</p>
-            <select>
-                <option value="">AAAAA</option>
-                <option value="">BBBBB</option>
-                <option value="">CCCCC</option>
-                <option value="">DDDDD</option>
-                <option value="">EEEEE</option>
-            </select>
-        </div>
-        <div>
-            <p>text</p>
-            <input type="text"/>
-        </div>
-        <div>
-            <p>text : ime-mode</p>
-            <input type="text" style="-ms-ime-mode:disabled; ime-mode:disabled"/>
-        </div>
-        <div>
-            <p>number</p>
-            <input type="number"/>
-        </div>
-        <div>
-            <p>tel</p>
-            <input type="tel"/>
-        </div>
-        <div>
-            <p>email</p>
-            <input type="email"/>
-        </div>
-        <div>
-            <p>url</p>
-            <input type="url"/>
-        </div>
-        <div>
-            <p>date</p>
-            <input type="date"/>
-        </div>
-        <div>
-            <p>time</p>
-            <input type="time"/>
-        </div>
-        <div>
-            <p>셀렉트박스</p>
-            <select>
-                <option value="">AAAAA</option>
-                <option value="">BBBBB</option>
-                <option value="">CCCCC</option>
-                <option value="">DDDDD</option>
-                <option value="">EEEEE</option>
-            </select>
-        </div>
-        <div>
-            <p>text</p>
-            <input type="text"/>
-        </div>
-        <div>
-            <p>text : ime-mode</p>
-            <input type="text" style="-ms-ime-mode:disabled; ime-mode:disabled"/>
-        </div>
-        <div>
-            <p>number</p>
-            <input type="number"/>
-        </div>
-        <div>
-            <p>tel</p>
-            <input type="tel"/>
-        </div>
-        <div>
-            <p>email</p>
-            <input type="email"/>
-        </div>
-        <div>
-            <p>url</p>
-            <input type="url"/>
-        </div>
-        <div>
-            <p>date</p>
-            <input type="date"/>
-        </div>
-        <div>
-            <p>time</p>
-            <input type="time"/>
-        </div>
-        <div>
-            <p>셀렉트박스</p>
-            <select>
-                <option value="">AAAAA</option>
-                <option value="">BBBBB</option>
-                <option value="">CCCCC</option>
-                <option value="">DDDDD</option>
-                <option value="">EEEEE</option>
-            </select>
-        </div>
-        <div>
-            <p>text</p>
-            <input type="text"/>
-        </div>
-        <div>
-            <p>text : ime-mode</p>
-            <input type="text" style="-ms-ime-mode:disabled; ime-mode:disabled"/>
-        </div>
-        <div>
-            <p>number</p>
-            <input type="number"/>
-        </div>
-        <div>
-            <p>tel</p>
-            <input type="tel"/>
-        </div>
-        <div>
-            <p>email</p>
-            <input type="email"/>
-        </div>
-        <div>
-            <p>url</p>
-            <input type="url"/>
-        </div>
-        <div>
-            <p>date</p>
-            <input type="date"/>
-        </div>
-        <div>
-            <p>time</p>
-            <input type="time"/>
-        </div>
-        <div>
-            <p>셀렉트박스</p>
-            <select>
-                <option value="">AAAAA</option>
-                <option value="">BBBBB</option>
-                <option value="">CCCCC</option>
-                <option value="">DDDDD</option>
-                <option value="">EEEEE</option>
-            </select>
-        </div>
-        <div>
-            <p>text</p>
-            <input type="text"/>
-        </div>
-        <div>
-            <p>text : ime-mode</p>
-            <input type="text" style="-ms-ime-mode:disabled; ime-mode:disabled"/>
-        </div>
-        <div>
-            <p>number</p>
-            <input type="number"/>
-        </div>
-        <div>
-            <p>tel</p>
-            <input type="tel"/>
-        </div>
-        <div>
-            <p>email</p>
-            <input type="email"/>
-        </div>
-        <div>
-            <p>url</p>
-            <input type="url"/>
-        </div>
-        <div>
-            <p>date</p>
-            <input type="date"/>
-        </div>
-        <div>
-            <p>time</p>
-            <input type="time"/>
-        </div>
-        <div>
-            <p>셀렉트박스</p>
-            <select>
-                <option value="">AAAAA</option>
-                <option value="">BBBBB</option>
-                <option value="">CCCCC</option>
-                <option value="">DDDDD</option>
-                <option value="">EEEEE</option>
-            </select>
-        </div>
-    </div>
+<!--    <div class="list-div">-->
+<!--        <div>-->
+<!--            <p>text</p>-->
+<!--            <input type="text"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>text : ime-mode</p>-->
+<!--            <input type="text" style="-ms-ime-mode:disabled; ime-mode:disabled"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>number</p>-->
+<!--            <input type="number"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>tel</p>-->
+<!--            <input type="tel"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>email</p>-->
+<!--            <input type="email"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>url</p>-->
+<!--            <input type="url"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>date</p>-->
+<!--            <input type="date"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>time</p>-->
+<!--            <input type="time"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>셀렉트박스</p>-->
+<!--            <select>-->
+<!--                <option value="">AAAAA</option>-->
+<!--                <option value="">BBBBB</option>-->
+<!--                <option value="">CCCCC</option>-->
+<!--                <option value="">DDDDD</option>-->
+<!--                <option value="">EEEEE</option>-->
+<!--            </select>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>text</p>-->
+<!--            <input type="text"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>text : ime-mode</p>-->
+<!--            <input type="text" style="-ms-ime-mode:disabled; ime-mode:disabled"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>number</p>-->
+<!--            <input type="number"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>tel</p>-->
+<!--            <input type="tel"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>email</p>-->
+<!--            <input type="email"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>url</p>-->
+<!--            <input type="url"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>date</p>-->
+<!--            <input type="date"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>time</p>-->
+<!--            <input type="time"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>셀렉트박스</p>-->
+<!--            <select>-->
+<!--                <option value="">AAAAA</option>-->
+<!--                <option value="">BBBBB</option>-->
+<!--                <option value="">CCCCC</option>-->
+<!--                <option value="">DDDDD</option>-->
+<!--                <option value="">EEEEE</option>-->
+<!--            </select>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>text</p>-->
+<!--            <input type="text"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>text : ime-mode</p>-->
+<!--            <input type="text" style="-ms-ime-mode:disabled; ime-mode:disabled"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>number</p>-->
+<!--            <input type="number"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>tel</p>-->
+<!--            <input type="tel"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>email</p>-->
+<!--            <input type="email"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>url</p>-->
+<!--            <input type="url"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>date</p>-->
+<!--            <input type="date"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>time</p>-->
+<!--            <input type="time"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>셀렉트박스</p>-->
+<!--            <select>-->
+<!--                <option value="">AAAAA</option>-->
+<!--                <option value="">BBBBB</option>-->
+<!--                <option value="">CCCCC</option>-->
+<!--                <option value="">DDDDD</option>-->
+<!--                <option value="">EEEEE</option>-->
+<!--            </select>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>text</p>-->
+<!--            <input type="text"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>text : ime-mode</p>-->
+<!--            <input type="text" style="-ms-ime-mode:disabled; ime-mode:disabled"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>number</p>-->
+<!--            <input type="number"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>tel</p>-->
+<!--            <input type="tel"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>email</p>-->
+<!--            <input type="email"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>url</p>-->
+<!--            <input type="url"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>date</p>-->
+<!--            <input type="date"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>time</p>-->
+<!--            <input type="time"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>셀렉트박스</p>-->
+<!--            <select>-->
+<!--                <option value="">AAAAA</option>-->
+<!--                <option value="">BBBBB</option>-->
+<!--                <option value="">CCCCC</option>-->
+<!--                <option value="">DDDDD</option>-->
+<!--                <option value="">EEEEE</option>-->
+<!--            </select>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>text</p>-->
+<!--            <input type="text"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>text : ime-mode</p>-->
+<!--            <input type="text" style="-ms-ime-mode:disabled; ime-mode:disabled"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>number</p>-->
+<!--            <input type="number"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>tel</p>-->
+<!--            <input type="tel"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>email</p>-->
+<!--            <input type="email"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>url</p>-->
+<!--            <input type="url"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>date</p>-->
+<!--            <input type="date"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>time</p>-->
+<!--            <input type="time"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <p>셀렉트박스</p>-->
+<!--            <select>-->
+<!--                <option value="">AAAAA</option>-->
+<!--                <option value="">BBBBB</option>-->
+<!--                <option value="">CCCCC</option>-->
+<!--                <option value="">DDDDD</option>-->
+<!--                <option value="">EEEEE</option>-->
+<!--            </select>-->
+<!--        </div>-->
+<!--    </div>-->
+    <div class="name1"></div>
+    <div class="name2"></div>
+    <div class="name3"></div>
 </div>
 </body>
 </html>
