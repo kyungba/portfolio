@@ -63,7 +63,7 @@
         })
 
         $(window).load(function(){
-            if($(window).width() * $("#video video").outerHeight() > $(window).height() * $("#video video").outerWidth()){
+            if($(window).width() * $("#video video").get(0).clientHeight > $(window).height() * $("#video video").get(0).clientWidth){
                 $("#video").addClass("on");
             }else{
                 $("#video").removeClass("on");
