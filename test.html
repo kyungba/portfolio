@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0,target-densitydpi=medium-dpi, viewport-fit=cover" />
     <title>Title</title>
     <script type="text/javascript" src="./js/jquery-1.12.4.js"></script>
     <script>
@@ -19,7 +20,7 @@
     <script>
         $(function(){
             $(window).resize(function(){
-                if($(window).width() * $("#video video").outerHeight() > $(window).height() * $("#video video").outerWidth()){
+                if($(window).width() * $("#video video").get(0).clientHeight > $(window).height() * $("#video video").get(0).clientWidth){
                     $("#video").addClass("on");
                 }else{
                     $("#video").removeClass("on");
@@ -61,15 +62,22 @@
             }, 100);
         })
 
+        $(window).load(function(){
+            if($(window).width() * $("#video video").outerHeight() > $(window).height() * $("#video video").outerWidth()){
+                $("#video").addClass("on");
+            }else{
+                $("#video").removeClass("on");
+            }
+
+        })
+
 
     </script>
 </head>
 <body>
     <div id="wrap">
         <div id="video">
-            <video autoplay loop muted preload playsinline>
-                <source src="./bblab.mp4" type="video/mp4">
-            </video>
+            <video src="./bblab.mp4" autoplay loop muted playsinline></video>
         </div>
         <div class="inner">
             <div class="hex hex1"></div>
