@@ -97,46 +97,49 @@ var script = (function(){
 			var scrollT = 0;
 			$(".listDiv .list").each(function(){
 				$(this).click(function(){
-					$(".dimdBg").stop(true, true).fadeIn(300);
-					$(".viewPop").stop(true, true).fadeIn(300);
-					scrollT = $(window).scrollTop();
-					$("html").addClass("lock");
-					if(!$(".viewPop").hasClass($(this).attr("id"))){
-						$(".viewPop .titArea .tit span").text($(this).find(".txtArea .tit").text());
-						if(!$(this).hasClass("etc")){
-							$(".viewPop").removeClass().addClass("viewPop loading").addClass($(this).attr("id"));
-							$(".viewPop .titArea .link").show();
-							if($(this).data("href") == "intra"){
-								if(!$(".viewPop .titArea .link").hasClass("on")){
-									$(".viewPop .titArea .link").addClass("on");
-								}
-							}else{
-								if($(".viewPop .titArea .link").hasClass("on")){
-									$(".viewPop .titArea .link").removeClass("on");
-								}
-								$(".viewPop .titArea .link a").attr("href", $(this).data("href"));
-							}
-							$(".viewPop .etcArea").empty();
-							$(".viewPop .conArea .imgArea").empty();
-							$(".viewPop").height("");
-							for (var i=0; i < $(this).data("img-size"); i++){
-								$(".viewPop .conArea .imgArea").append('<img src="https://raw.githack.com/kyungba/portfolio/master/images/project_view_'+$(this).attr("id")+i+'.jpg" alt="" />').find("img").load(function(){
-									if($(".viewPop").hasClass("loading")){
-										$(".viewPop").removeClass("loading");
+
+					if(!$(this).hasClass("ing")) {
+						$(".dimdBg").stop(true, true).fadeIn(300);
+						$(".viewPop").stop(true, true).fadeIn(300);
+						scrollT = $(window).scrollTop();
+						$("html").addClass("lock");
+						if (!$(".viewPop").hasClass($(this).attr("id"))) {
+							$(".viewPop .titArea .tit span").text($(this).find(".txtArea .tit").text());
+							if (!$(this).hasClass("etc")) {
+								$(".viewPop").removeClass().addClass("viewPop loading").addClass($(this).attr("id"));
+								$(".viewPop .titArea .link").show();
+								if ($(this).data("href") == "intra") {
+									if (!$(".viewPop .titArea .link").hasClass("on")) {
+										$(".viewPop .titArea .link").addClass("on");
 									}
-								});
+								} else {
+									if ($(".viewPop .titArea .link").hasClass("on")) {
+										$(".viewPop .titArea .link").removeClass("on");
+									}
+									$(".viewPop .titArea .link a").attr("href", $(this).data("href"));
+								}
+								$(".viewPop .etcArea").empty();
+								$(".viewPop .conArea .imgArea").empty();
+								$(".viewPop").height("");
+								for (var i = 0; i < $(this).data("img-size"); i++) {
+									$(".viewPop .conArea .imgArea").append('<img src="https://raw.githack.com/kyungba/portfolio/master/images/project_view_' + $(this).attr("id") + i + '.jpg" alt="" />').find("img").load(function () {
+										if ($(".viewPop").hasClass("loading")) {
+											$(".viewPop").removeClass("loading");
+										}
+									});
+								}
+							} else {
+								$(".viewPop").removeClass().addClass("viewPop").addClass($(this).attr("id"));
+								$(".viewPop .titArea .link").hide();
+								$(".viewPop .conArea .imgArea").empty();
+								$(".viewPop").height("");
+								$(".viewPop .conArea .etcArea").html($(this).find(".kindD").html());
 							}
-						}else{
-							$(".viewPop").removeClass().addClass("viewPop").addClass($(this).attr("id"));
-							$(".viewPop .titArea .link").hide();
-							$(".viewPop .conArea .imgArea").empty();
-							$(".viewPop").height("");
-							$(".viewPop .conArea .etcArea").html($(this).find(".kindD").html());
-						}
-						if(parseInt(_winH * 0.9) % 2 == 1){
-							$(".viewPop").height(parseInt(_winH * 0.9) - 1);
-						}else{
-							$(".viewPop").height(parseInt(_winH * 0.9));
+							if (parseInt(_winH * 0.9) % 2 == 1) {
+								$(".viewPop").height(parseInt(_winH * 0.9) - 1);
+							} else {
+								$(".viewPop").height(parseInt(_winH * 0.9));
+							}
 						}
 					}
 				});
