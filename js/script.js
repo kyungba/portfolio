@@ -1,29 +1,40 @@
 var _winH;
+var popCnt = 0;
+var historyCnt = 0;
 var script = (function(){
 	var device = '';
 	var browser = '';
 	return {
 		readyEvt : function(){
+			//색지정
 			$(".workList .listDiv .list").each(function(){
 				$(this).find(".dimd").css("background", $(this).data("color"));
 			});
 
+			//제안 PC체크
 			if($(".proposalList").size() > 0){
 				if(device != 'pc'){
 					$("#content").addClass("mob");
 				}
 			}
+			
+			//모션
+			if($(".listDiv").size() > 0){
+				$(".listDiv .list").each(function(q){
+					TweenMax.to($(".listDiv .list").eq(q), 0, {top:0, opacity:1, delay:q*0.15});
+				});
+			}
 		},
 		thumbHover : function (selector, cover) {
             var w, h, x, y, direction;
             $(selector).each(function(){
+            	//엔터
 				$(this).on("mouseenter", function () {
 					w = $(this).width();
 					h = $(this).height();
 					x = ( event.pageX - $(this).offset().left - ( w/2 )) * ( w > h ? ( h/w ) : 1 ),
 					y = ( event.pageY - $(this).offset().top  - ( h/2 )) * ( h > w ? ( w/h ) : 1 ),
 					direction = Math.round( ( ( ( Math.atan2(y, x) * (180 / Math.PI) ) + 180 ) / 90 ) + 3 )  % 4;
-
 					$(this).find(cover).show();
 
 					if(direction == 0) {
@@ -35,10 +46,10 @@ var script = (function(){
 					} else {
 						$(this).find(cover).css({"top":0, "left":-w});
 					}
-
 					TweenMax.to($(this).find(cover), 0.4, {top:0, left:0, ease:Power3.easeOut});
 				});
 
+				//리브
 				$(this).on("mouseleave", function () {
 					w = $(this).width();
 					h = $(this).height();
@@ -76,7 +87,6 @@ var script = (function(){
 						$(".viewPop").height(parseInt(_winH * 0.9));
 					}
 				}
-
 				$(".workList .listDiv .list").each(function(){
 					$(this).find(".dimd").css("left",$(this).outerWidth())
 				});
@@ -84,20 +94,16 @@ var script = (function(){
 		},
 		scrollEvt : function(){
 			$(window).scroll(function(){
-				if($(".listDiv").size() > 0){
-					if($(window).scrollTop() + $(window).height()/2 > $(".listDiv").offset().top){
-						$(".listDiv .list").each(function(q){
-							TweenMax.to($(".listDiv .list").eq(q), 0, {top:0, opacity:1, delay:q*0.15});
-						});
-					}
-				}
 			});$(window).scroll();
 		},
 		viewPop : function(){
 			var scrollT = 0;
 			$(".listDiv .list").each(function(){
+				
+				//열
 				$(this).click(function(){
-
+					history.pushState(null, document.title, location.href);
+					historyCnt++;
 					if(!$(this).hasClass("ing")) {
 						$(".dimdBg").stop(true, true).fadeIn(300);
 						$(".viewPop").stop(true, true).fadeIn(300);
@@ -144,12 +150,28 @@ var script = (function(){
 					}
 				});
 			});
+			
+			//닫
 			$(".viewPop .xBtn").click(function(){
 				$(".dimdBg").stop(true, true).fadeOut(300);
 				$(".viewPop").stop(true, true).fadeOut(300);
 				$("html").removeClass("lock");
 				$("html, body").scrollTop(scrollT);
 			});
+			
+			//뒤로가기 체크
+			window.onpopstate = function(event){
+				popCnt ++;
+				if ($(".viewPop").is(':visible')){
+					$(".dimdBg").stop(true, true).fadeOut(300);
+					$(".viewPop").stop(true, true).fadeOut(300);
+					$("html").removeClass("lock");
+					$("html, body").scrollTop(scrollT);
+					history.scrollRestoration = 'manual';
+				}else{
+					history.go(-(historyCnt - popCnt+1));
+				}
+			}
 		},
 		checkEvt : function(){
 			if( /Android/i.test(navigator.userAgent)) {
@@ -196,7 +218,7 @@ $(document).ready(function(){
 	script.checkEvt();
 	script.readyEvt();
 	script.resizeEvt();
-	script.scrollEvt();
+	//script.scrollEvt();
 	script.viewPop();
 });
 
