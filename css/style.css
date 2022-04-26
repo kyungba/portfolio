@@ -97,7 +97,8 @@ html.lock body{height:100%; overflow:hidden}
 #content.mob .errorT{display:table; padding:0 20px; width:100%; height:100vh; background:#f6f6f6; word-break:keep-all}
 #content.mob .errorT p{display:table-cell; vertical-align:middle; text-align:center; font-size:15px; line-height:22px; color:#d84c4c}
 #content.mob .workList{display:none}
-.errorT{display:none}
+#content .errorT{display:none; padding:0 20px; width:100%; height:100vh; background:#f6f6f6; word-break:keep-all}
+#content .errorT p{display:table-cell; vertical-align:middle; text-align:center; font-size:15px; line-height:22px; color:#d84c4c}
 .workList{margin:0 auto; width:1160px}
 .workList .title{position:relative; font-weight:700; font-size:26px; color:#000; text-align:left}
 .workList .title .other{position:absolute; top:15px; right:0; padding:0 9px; height:26px; font-size:13px; line-height:26px; color:#555; border:1px solid #555; border-radius:20px; transition:color 0.4s ease, border 0.4s ease;}
@@ -226,10 +227,11 @@ html.lock body{height:100%; overflow:hidden}
 	html.lock{position:fixed; width:100%; height:100%}
 	html.lock body{position:fixed; width:100%; height:100%; overflow:visible}
 	html.lock #wrap{position:fixed; width:100%; height:100%}
-	#content{padding:50px 0}
-	#content.mob .errorT{padding:0 5%}
-	#content.mob .errorT p{font-size:13px; line-height:20px}
-	.workList{width:90%}
+	#content{padding:0}
+	#content .errorT{padding:0 5%}
+	#content .errorT p{font-size:13px; line-height:20px}
+	#content .errorT + .workList{display:none}
+	.workList{padding:50px 0; width:90%}
 	.workList .title{font-size:20px;}
 	.workList .title .other{top:10px; font-size:12px;}
 	.workList .listDiv{margin-top:30px}

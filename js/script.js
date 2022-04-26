@@ -91,6 +91,13 @@ var script = (function(){
 				$(".workList .listDiv .list").each(function(){
 					$(this).find(".dimd").css("left",$(this).outerWidth())
 				});
+
+				if($(window).width() > 981){
+					$(".errorT").css("display","none");
+				}else{
+					$(".errorT").css("display","table");
+				}
+
 			});$(window).resize();
 		},
 		scrollEvt : function(){
