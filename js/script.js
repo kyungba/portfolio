@@ -1,6 +1,7 @@
 var _winH;
 var popCnt = 0;
 var historyCnt = 0;
+
 var script = (function(){
 	var device = '';
 	var browser = '';
@@ -27,8 +28,9 @@ var script = (function(){
 		},
 		thumbHover : function (selector, cover) {
             var w, h, x, y, direction;
+            var time = 0.5;
+            //방향대로 hover 이벤트
             $(selector).each(function(){
-            	//엔터
 				$(this).on("mouseenter", function () {
 					w = $(this).width();
 					h = $(this).height();
@@ -46,10 +48,9 @@ var script = (function(){
 					} else {
 						$(this).find(cover).css({"top":0, "left":-w});
 					}
-					TweenMax.to($(this).find(cover), 0.4, {top:0, left:0, ease:Power3.easeOut});
+					TweenMax.to($(this).find(cover), time, {top:0, left:0, ease:Power3.easeOut});
 				});
 
-				//리브
 				$(this).on("mouseleave", function () {
 					w = $(this).width();
 					h = $(this).height();
@@ -58,19 +59,19 @@ var script = (function(){
 					direction = Math.round( ( ( ( Math.atan2(y, x) * (180 / Math.PI) ) + 180 ) / 90 ) + 3 )  % 4;
 
 					if(direction == 0) {
-						TweenMax.to($(this).find(cover), 0.4, {top:-h, left:0, ease:Power3.easeOut, onComplete:function () {
+						TweenMax.to($(this).find(cover), time, {top:-h, left:0, ease:Power3.easeOut, onComplete:function () {
 							$(this).parent().find(cover).hide();
 						}});
 					} else if(direction == 1) {
-						TweenMax.to($(this).find(cover), 0.4, {top:0, left:w, ease:Power3.easeOut, onComplete:function () {
+						TweenMax.to($(this).find(cover), time, {top:0, left:w, ease:Power3.easeOut, onComplete:function () {
 							$(this).parent().find(cover).hide();
 						}});
 					} else if(direction == 2) {
-						TweenMax.to($(this).find(cover), 0.4, {top:h, left:0, ease:Power3.easeOut, onComplete:function () {
+						TweenMax.to($(this).find(cover), time, {top:h, left:0, ease:Power3.easeOut, onComplete:function () {
 							$(this).parent().find(cover).hide();
 						}});
 					} else {
-						TweenMax.to($(this).find(cover), 0.4, {top:0, left:-w, ease:Power3.easeOut, onComplete:function () {
+						TweenMax.to($(this).find(cover), time, {top:0, left:-w, ease:Power3.easeOut, onComplete:function () {
 							$(this).parent().find(cover).hide();
 						}});
 					}
@@ -100,7 +101,7 @@ var script = (function(){
 			var scrollT = 0;
 			$(".listDiv .list").each(function(){
 				
-				//열
+				//열기
 				$(this).click(function(){
 					history.pushState(null, document.title, location.href);
 					historyCnt++;
@@ -147,11 +148,13 @@ var script = (function(){
 								$(".viewPop").height(parseInt(_winH * 0.9));
 							}
 						}
+					}else{
+						toastPop("현재 작업중인 프로젝트입니다")
 					}
 				});
 			});
 			
-			//닫
+			//닫기
 			$(".viewPop .xBtn").click(function(){
 				$(".dimdBg").stop(true, true).fadeOut(300);
 				$(".viewPop").stop(true, true).fadeOut(300);
@@ -212,6 +215,60 @@ var script = (function(){
 	}
 })();
 
+
+function alertPop(tit, txt, btn, url, depth) { //txt : 서브텍스트, btn : 확인버튼 문구, url : 확인버튼 url 추가시
+	//url 입력안할시
+	if (url == undefined || url == "") {
+		url = 'javascript:';
+	}
+
+	$("#wrap").append('<div class="alertPop"><div class="popCon"><p class="tit">' + tit + '</p><p class="txt">' + txt + '</p><div class="popBtn"><a href="' + url + '" class="okBtn close">' + btn + '</a></div></div></div>');
+	if (tit == undefined || tit == "") {
+		$(".alertPop .popCon .tit").remove();
+	}
+	if (txt == undefined || txt == "") {
+		$(".alertPop .popCon .txt").remove();
+	}
+
+	if ($(".alertPop").width() % 2 != 0) {
+		$(".alertPop").width($(".alertPop").width() - 1);
+	}
+	$(".alertPop").stop(true, true).fadeIn(300);
+	if (depth == "y") {
+		$(".dimdBg").css("z-index", "11");
+	}else{
+		$("html").addClass("not_scroll");
+	}
+	$(".dimdBg").stop(true, true).fadeIn(300);
+
+	$(".alertPop .close").on("click", function () {
+		$(".alertPop").stop().fadeOut(300, function () {
+			$(this).remove();
+		});
+		if (depth == "y") {
+			$(".dimdBg").css("z-index", "");
+		} else {
+			$("html").removeClass("not_scroll");
+			$(".dimdBg").stop().fadeOut(300);
+		}
+	});
+}
+
+function toastPop(tit) {
+	if ($("#wrap").find(".toastPop").size() > 0) {
+		$(".toastPop").remove();
+	}
+	$("#wrap").append('<div class="toastPop">' + tit + '</div>');
+	if ($(".toastPop").width() % 2 != 0) {
+		$(".toastPop").width($(".toastPop").width() - 1);
+	}
+	TweenMax.to($(".toastPop"), 0.3, {bottom: 40, ease: Power3.easeOut, onComplete: function () {
+		TweenMax.to(this.targets(), 0.3, {bottom: -200, delay: 2, ease: Power3.easeIn, onComplete: function () {
+			this.targets()[0].remove();
+			isToastMake = true;
+		}})
+	}})
+}
 
 
 $(document).ready(function(){
