@@ -121,7 +121,7 @@ html.lock body{height:100%; overflow:hidden}
 .workList .listDiv .list .txtArea .type span.responsive{color:#00959c; border:1px solid rgba(0, 149, 156, 0.8)}
 .workList .listDiv .list .txtArea .type span.pcweb{color:#004d45; border:1px solid rgba(0, 77, 69, 0.8)}
 .workList .listDiv .list .txtArea .type span.mobweb{color:#0067ac; border:1px solid rgba(0, 103, 172, 0.8)}
-.workList .listDiv .list .txtArea .type span.app{color:#146f7a; border:1px solid rgba(20, 111, 122, 0.8)}
+.workList .listDiv .list .txtArea .type span.app{color:#2ba758; border:1px solid rgba(43, 167, 88, 0.8)}
 .workList .listDiv .list .txtArea .type span:last-child{margin-right:0}
 .workList .listDiv .list .txtArea .tit{margin-top:12px; font-weight:500; font-size:20px; line-height:26px; color:#333; word-break:keep-all}
 .workList .listDiv .list .txtArea .tit span{display:inline}
