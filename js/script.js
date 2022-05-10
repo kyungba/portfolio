@@ -106,10 +106,14 @@ var script = (function(){
 		},
 		viewPop : function(){
 			var scrollT = 0;
+			var imgSizeData = 0;
+			var imgLoad;
 			$(".listDiv .list").each(function(){
 				
 				//열기
 				$(this).click(function(){
+					imgLoad = 0;
+					imgSizeData = $(this).data("imgSize");
 					history.pushState(null, document.title, location.href);
 					historyCnt++;
 					if(!$(this).hasClass("ing")) {
@@ -135,9 +139,12 @@ var script = (function(){
 								$(".viewPop .etcArea").empty();
 								$(".viewPop .conArea .imgArea").empty();
 								$(".viewPop").height("");
-								for (var i = 0; i < $(this).data("img-size"); i++) {
-									$(".viewPop .conArea .imgArea").append('<img src="https://raw.githack.com/kyungba/portfolio/master/images/project_view_' + $(this).attr("id") + i + '.jpg" alt="" />').find("img").load(function () {
-										if ($(".viewPop").hasClass("loading")) {
+								for (var i = 0; i < $(this).data("imgSize"); i++) {
+									console.log("i : " + i)
+									$(".viewPop .conArea .imgArea").append('<img src="https://raw.githack.com/kyungba/portfolio/master/images/project_view_' + $(this).attr("id") + i + '.jpg" alt="" />');
+									$(".viewPop .conArea .imgArea img").eq(i).load(function () {
+										imgLoad ++;
+										if(imgLoad == imgSizeData -1){
 											$(".viewPop").removeClass("loading");
 										}
 									});
