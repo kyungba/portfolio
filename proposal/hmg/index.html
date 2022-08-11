@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="Generator" content="EditPlus®">
+	<meta name="Author" content="">
+	<meta name="Keywords" content="">
+	<meta name="Description" content="">
+	<title>HMG Driving Experience</title>
+	<link rel="stylesheet" href="./css/swiper.min.css" />
+	<link rel="stylesheet" href="./css/style.css" />
+	<script type="text/javascript" src="./js/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="./greensock/TweenMax.js"></script>
+	<script type="text/javascript" src="./js/swiper.js"></script>
+	<script type="text/javascript" src="./js/jquery.smoothwheel.js"></script>
+	<script type="text/javascript" src="./js/script.js"></script>
+ </head>
+
+<body>
+	<div id="wrap" class="main">
+		<div class="header">
+			<a href="../../index.html" class="logo"><img src="./images/logo.png" alt="" /></a>
+		</div>
+		<div class="utill">
+			<img src="./images/utill.png" alt="" />
+		</div>
+		<a href="javascript:" class="hamburger">
+			<img src="./images/hamburger.png" alt="" />
+			<img src="./images/hamburger_hover.png" alt="" />
+		</a>
+		<div class="allMenu">
+			<a href="javascript:" class="closeBtn"></a>
+			<a href="./sub1.html" class="twoD"></a>
+		</div>		
+		<div class="mainV">
+			<canvas id="canvas1a" width="1421" height="1421">
+			</canvas>
+			<canvas id="canvas1b" width="1421" height="1421">
+			</canvas>
+			<canvas id="canvas1" width="1421" height="1421">
+			</canvas>
+			<canvas id="canvas2a" width="960" height="960">
+			</canvas>
+			<canvas id="canvas2b" width="960" height="960">
+			</canvas>
+			<canvas id="canvas2" width="960" height="960">
+			</canvas>
+			<canvas id="canvas3a" width="499" height="499">
+			</canvas>
+			<canvas id="canvas3b" width="499" height="499">
+			</canvas>
+			<canvas id="canvas3" width="499" height="499">
+			</canvas>
+
+			<div class="visualD">
+				<div class="visual">
+					<div class="video">
+						<video id="mainMovie" muted="true" playsinline autoplay loop preload="auto">
+							<source src="./video/HMG_movie.mp4" type="video/mp4">
+						</video>
+						<div class="area">
+							<p class="tit"><img src="./images/visual_tit1.png" alt="" /></p>
+						</div>
+					</div>
+				</div>
+				<div class="visual">
+					<div class="area">
+							<p class="tit"><img src="./images/visual_tit2.png" alt="" /></p>
+						</div>
+				</div>
+			</div>
+
+			<div class="visualBtn">
+				<a href="javascript:" class="prev roll">
+					<img src="./images/visual_prevBtn.png" alt="" />
+					<img src="./images/visual_prevBtn_hover.png" alt="" />
+				</a>
+				<p class="count"><span>1</span><img src="./images/visual_count.png" alt="" /></p>
+				<div class="cellD">
+					<span class="on"></span>
+					<span></span>
+					<span></span>
+				</div>
+				<a href="javascript:" class="next roll">
+					<img class="oriImg" src="./images/visual_nextBtn.png" alt="" />
+					<img src="./images/visual_nextBtn_hover.png" alt="" />
+					<span class="arrow"><img src="./images/arrowCanvas.png" alt=""></span>
+					<canvas id="nextBtn" width="70" height="70" style="top:0; left:0; bottom:auto;"></canvas>
+				</a>
+				<p class="pause"><img src="./images/visual_pause.png" alt="" /></p>
+			</div>
+		</div>
+		
+		<a href="javascript:" class="bookBtn"><img src="./images/bookNow.png" alt="" /><img src="./images/bookNow_hover.png" alt="" /></a>
+		<div class="bookingArea">
+			<div class="bgD">
+				<div class="intro">
+					<p class="tit"><img src="./images/booking_intro_tit.png" alt="" /></p>
+					<a href="javascript:" class="btn"><img src="./images/booking_intro_tab.png" alt="" /></a>
+				</div>
+				<div class="top">
+					<img src="./images/booking_step_top.png" alt="" />
+				</div>
+				<div class="bottom">
+					<img src="./images/booking_bottom_txt1.png" alt="" />
+					<span><img src="./images/booking_bottom_txt2.png" alt="" /></span>
+					<span><img src="./images/booking_bottom_txt3.png" alt="" /></span>
+					<span><img src="./images/booking_bottom_txt4.png" alt="" /></span>
+					<div class="reserve"></div>
+				</div>
+				<div class="step1">
+					<p class="tit"><img src="./images/booking_step1_tit.png" alt="" /></p>
+					<div class="listD">
+						<div class="list">
+							<img src="./images/booking_step1_list1.png" alt="" />
+						</div>
+						<div class="list">
+							<img src="./images/booking_step1_list2.png" alt="" />
+						</div>
+						<div class="list">
+							<img src="./images/booking_step1_list3.png" alt="" />
+						</div>
+						<div class="list hover">
+							<img src="./images/booking_step1_list4.png" alt="" />
+							<img src="./images/booking_step1_list4_hover.png" alt="" />
+						</div>
+						<div class="list">
+							<img src="./images/booking_step1_list5.png" alt="" />
+						</div>
+						<div class="list">
+							<img src="./images/booking_step1_list6.png" alt="" />
+						</div>
+					</div>
+				</div>
+				<div class="step2">
+					<p class="tit">
+						<img src="./images/booking_step2_tit.png" alt="" />
+						<span class="date"><img src="./images/booking_step2_date.png" alt="" /></span>
+					</p>
+					<div class="calendar">
+						<div class="list">
+							<img src="./images/booking_step2_calendar_list1.png" alt="" />
+						</div>
+						<div class="list">
+							<img src="./images/booking_step2_calendar_list2.png" alt="" />
+						</div>
+						<div class="list hover">
+							<img src="./images/booking_step2_calendar_list3.png" alt="" />
+							<img src="./images/booking_step2_calendar_list3_hover.png" alt="" />
+						</div>
+						<div class="list">
+							<img src="./images/booking_step2_calendar_list4.png" alt="" />
+						</div>
+						<a href="javascript:" class="prev"><img src="./images/booking_step2_prev.png" alt="" /></a>
+						<a href="javascript:" class="next"><img src="./images/booking_step2_next.png" alt="" /></a>
+					</div>
+				</div>
+				<div class="step3">
+					<div class="left">
+						<p class="tit"><img src="./images/booking_step3_tit.png" alt="" /></p>
+						<div class="data">
+							<img src="./images/booking_step3_data.png" alt="" />
+						</div>
+					</div>
+					<div class="right">
+						<p class="tit"><img src="./images/booking_step4_tit.png" alt="" /></p>
+						<div class="data">
+							<img src="./images/booking_step4_data.png" alt="" />
+						</div>
+					</div>
+					<div class="result">
+						<img src="./images/booking_result.png" alt="" />
+					</div>
+				</div>
+
+				<a href="javascript:" class="closeBtn"><img src="./images/bookingArea_closeBtn.png" alt="" /></a>
+			</div>
+		</div>
+
+		<div class="pagiNavi">
+			<div class="bar">
+				<span class="on"></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<div class="text">
+				<span class="on"></span>
+				<span><div class="toolTip"><img src="./images/indicator_tooltip.png" alt="" /></div></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+
+		<div class="mainTabCon">
+			<div class="oneD">
+				<div class="txtArea">
+					<p class="tit"><img src="./images/program_tit.png" alt="" /></p>
+					<p class="txt"><img src="./images/program_txt.png" alt="" /></p>
+				</div>
+				<div class="listDiv">
+					<div class="list">
+						<img src="./images/program_list1.jpg" alt="" />
+					</div>
+					<div class="list click">
+						<img src="./images/program_list2.jpg" alt="" />
+					</div>
+					<div class="list">
+						<img src="./images/program_list3.jpg" alt="" />
+					</div>
+					<div class="list">
+						<img src="./images/program_list4.jpg" alt="" />
+					</div>
+					<div class="list">
+						<img src="./images/program_list5.jpg" alt="" />
+					</div>
+					<div class="list">
+						<img src="./images/program_list6.jpg" alt="" />
+					</div>
+					<div class="list">
+						<img src="./images/program_list7.jpg" alt="" />
+					</div>
+					<div class="list">
+						<img src="./images/program_list8.jpg" alt="" />
+					</div>
+					<div class="list">
+						<img src="./images/program_list9.jpg" alt="" />
+					</div>
+				</div>
+				<div class="kiaView">
+					<img src="./images/hmg3_section2_rize.jpg" alt="">
+				</div>
+				<div class="lyPop"></div>
+			</div>
+
+			<div class="twoD">
+				<div class="txtArea">
+					<p class="tit"><img src="./images/experience_tit.png" alt="" /></p>
+					<p class="txt"><img src="./images/experience_txt.png" alt="" /></p>
+				</div>
+				<div class="bgDiv">
+					<div class="bg">
+						<img src="./images/experience_bg0.jpg" alt="" />
+						<img src="./images/experience_bg1.jpg" alt="" />
+						<img src="./images/experience_bg2.jpg" alt="" />
+						<img src="./images/experience_bg3.jpg" alt="" />
+					</div>
+					<div class="hover">
+						<a href="javascript:"></a>
+						<a href="javascript:"></a>
+						<a href="javascript:"></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="thrD">
+				<div class="listDiv">
+					<div class="list"><img src="./images/enjoy_gallery_tit.png" alt="" /></div>
+					<div class="list"><img src="./images/enjoy_gallery_list1.jpg" alt="" /></div>
+					<div class="list"><img src="./images/enjoy_gallery_list2.jpg" alt="" /></div>
+					<div class="list"><img src="./images/enjoy_gallery_list3.jpg" alt="" /></div>
+					<div class="list"><img src="./images/enjoy_gallery_list4.jpg" alt="" /></div>
+					<div class="list"><img src="./images/enjoy_gallery_list5.jpg" alt="" /></div>
+					<div class="list"><img src="./images/enjoy_gallery_list6.jpg" alt="" /></div>
+					<div class="list"><img src="./images/enjoy_gallery_list7.jpg" alt="" /></div>
+				</div>
+				<div class="footer">
+					<img src="./images/footer.jpg" alt="" />
+				</div>
+			</div>
+
+		</div>
+		<p class="dimdBg"></p>
+	</div>
+</body>
+ <script type="text/javascript">
+	 $(function () {
+		 // CANVAS
+		 var canvas = document.getElementById('nextBtn'),
+				 width = canvas.width,
+				 height = canvas.height;
+
+		 // CANVAS PROPERTIES
+		 var ctx = canvas.getContext('2d');
+
+		 var gradient = ctx.createLinearGradient(0, 0, 0, 50);
+		 gradient.addColorStop("0", "#ff8833");
+		 gradient.addColorStop("1", "#e11111");
+		 ctx.lineWidth = 2;
+		 ctx.strokeStyle = gradient;
+		 ctx.shadowOffsetX = 0;
+		 ctx.shadowOffsetY = 0;
+		 ctx.shadowBlur = 4;
+		 ctx.shadowColor = '#e11111';
+
+		 // CANVAS MATHS
+		 var x = width / 2,
+				 y = height / 2,
+				 radius = 30,
+				 circum = Math.PI * 2,
+				 start = Math.PI / -2, // Start position (top)
+				 finish = 100, // Finish (in %)
+				 curr = 0; // Current position (in %)
+
+		 // Animate function
+		 var motion;
+		 function animate(draw_to) {
+			 ctx.clearRect(0, 0, width, height);
+			 ctx.beginPath();
+			 ctx.arc(x, y, radius, start, draw_to, false);
+			 ctx.stroke();
+			 curr++;
+			 if (curr < finish + 1) {
+				 motion = requestAnimationFrame(function () {
+					 animate(circum * curr / 30 + start);
+				 });
+			 }
+		 }
+
+		 //animate();
+
+
+		 $("#nextBtn").hover(function () {
+			 animate();
+		 }, function () {
+			 cancelAnimationFrame(motion);
+			 curr = 0;
+			 ctx.clearRect(0, 0, width, height);
+		 })
+	 });
+
+ </script>
+</html>
