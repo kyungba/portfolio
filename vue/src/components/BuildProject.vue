@@ -155,7 +155,8 @@ export default {
           popup.querySelector(".imgArea").innerHTML = "";
           popup.height = "";
           for (var i = 0; i < $this.dataset.imgSize; i++) {
-            popup.querySelector(".conArea .imgArea").insertAdjacentHTML('beforeend','<img src="https://raw.githack.com/kyungba/portfolio/master/images/project_view_' + $this.id + i + '.jpg" alt="" />');
+            var appendImg = require('@/assets/images/project_view_' + $this.id + i + '.jpg');
+            popup.querySelector(".conArea .imgArea").insertAdjacentHTML('beforeend','<img src=' + appendImg + ' alt="" />');
             popup.querySelectorAll(".conArea .imgArea img")[i].onload = () => {
               this.imgLoad ++;
               if(this.imgLoad == this.imgSizeData -1){

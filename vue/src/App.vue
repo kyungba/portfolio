@@ -18,7 +18,7 @@
         </ProposalProject>
       </div>
     </div>
-    <p class="dimdBg"></p>
+    <p class="dimdBg" @click="popClose"></p>
   </div>
 
   <ProjectPop>

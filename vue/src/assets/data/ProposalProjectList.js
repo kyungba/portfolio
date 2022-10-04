@@ -14,7 +14,7 @@ export default [
   {
     id: 'samhwa',
     name: '삼화페인트',
-    href: 'https://raw.githack.com/kyungba/portfolio/master/proposal/samhwa/index.html',
+    href: 'https://raw.githack.com/kyungba/portfolio/master/samhwa/index.html',
     result: '',
   },
   {
