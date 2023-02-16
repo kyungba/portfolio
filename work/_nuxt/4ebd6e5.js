@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[151],{3024:function(t,n,e){"use strict";e.r(n);var o={components:{Drops:e(1708).default},layout:"wic",data:function(){return{}}},c=e(3),component=Object(c.a)(o,(function(){var t=this.$createElement;return(this._self._c||t)("Drops",{staticClass:"wic-drops"})}),[],!1,null,"1401d30d",null);n.default=component.exports}}]);

@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/ru/drops", {data:[{}],fetch:{},mutations:[]});

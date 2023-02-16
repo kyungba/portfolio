@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/zh/wic/clanhome", {data:[{}],fetch:{},mutations:[]});

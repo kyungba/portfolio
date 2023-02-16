@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/pt/competition/reward", {data:[{}],fetch:{},mutations:[]});

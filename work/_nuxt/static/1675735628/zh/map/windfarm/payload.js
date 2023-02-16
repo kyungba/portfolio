@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/zh/map/windfarm", {data:[{}],fetch:{},mutations:[]});

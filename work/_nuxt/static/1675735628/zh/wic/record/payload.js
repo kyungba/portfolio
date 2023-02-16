@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/zh/wic/record", {data:[{}],fetch:{},mutations:[]});
