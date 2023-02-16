@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/ko/weapon/1", {data:[{}],fetch:{},mutations:[]});

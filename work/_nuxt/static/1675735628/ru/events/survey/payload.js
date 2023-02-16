@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/ru/events/survey", {data:[{}],fetch:{},mutations:[]});

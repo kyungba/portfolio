@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/en/competition/tier", {data:[{}],fetch:{},mutations:[]});
