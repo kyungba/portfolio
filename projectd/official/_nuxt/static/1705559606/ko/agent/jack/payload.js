@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/ko/agent/jack", {data:[{}],fetch:{},mutations:[]});

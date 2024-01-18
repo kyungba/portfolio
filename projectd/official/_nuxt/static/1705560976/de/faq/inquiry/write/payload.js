@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/de/faq/inquiry/write", {data:[{}],fetch:{},mutations:[]});

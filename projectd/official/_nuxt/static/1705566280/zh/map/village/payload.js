@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/zh/map/village", {data:[{}],fetch:{},mutations:[]});

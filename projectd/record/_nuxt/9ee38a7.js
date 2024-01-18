@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[81],{2786:function(e,n,t){"use strict";t.r(n);var o={components:{Seedevent:t(576).default},layout:"empty",data:function(){return{}},mounted:function(){},methods:{}},c=t(3),component=Object(c.a)(o,(function(){return(0,this._self._c)("Seedevent")}),[],!1,null,"604e58f6",null);n.default=component.exports}}]);

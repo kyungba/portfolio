@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/ja/partner/apply", {data:[{}],fetch:{},mutations:[]});

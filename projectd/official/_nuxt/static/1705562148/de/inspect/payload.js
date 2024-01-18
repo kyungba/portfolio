@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/de/inspect", {data:[{}],fetch:{},mutations:[]});

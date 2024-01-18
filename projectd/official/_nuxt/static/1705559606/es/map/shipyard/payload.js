@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/es/map/shipyard", {data:[{}],fetch:{},mutations:[]});

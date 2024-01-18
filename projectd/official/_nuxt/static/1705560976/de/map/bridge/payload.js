@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/de/map/bridge", {data:[{}],fetch:{},mutations:[]});

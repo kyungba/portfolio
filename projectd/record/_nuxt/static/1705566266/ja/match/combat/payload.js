@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/ja/match/combat", {data:[{},{}],fetch:{},mutations:[]});

@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/es/wic/news/2", {data:[{}],fetch:{},mutations:[]});

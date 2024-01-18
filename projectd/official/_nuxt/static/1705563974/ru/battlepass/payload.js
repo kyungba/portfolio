@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/ru/battlepass", {data:[{}],fetch:{},mutations:[]});

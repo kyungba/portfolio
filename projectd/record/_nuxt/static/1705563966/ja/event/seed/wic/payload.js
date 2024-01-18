@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/ja/event/seed/wic", {data:[{}],fetch:{},mutations:[]});

@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/zh/map/vivastation", {data:[{}],fetch:{},mutations:[]});

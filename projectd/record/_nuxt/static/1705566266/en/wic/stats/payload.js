@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/en/wic/stats", {data:[{}],fetch:{},mutations:[]});

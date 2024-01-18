@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/ko/bug/1", {data:[{}],fetch:{},mutations:[]});

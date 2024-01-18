@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/zh/datalab", {data:[{}],fetch:{},mutations:[]});

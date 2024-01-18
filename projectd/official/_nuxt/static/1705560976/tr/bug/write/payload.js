@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/tr/bug/write", {data:[{}],fetch:{},mutations:[]});

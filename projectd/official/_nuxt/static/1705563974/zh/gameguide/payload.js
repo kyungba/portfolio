@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/zh/gameguide", {data:[{}],fetch:{},mutations:[]});

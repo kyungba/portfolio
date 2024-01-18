@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/en/agent/rita", {data:[{}],fetch:{},mutations:[]});

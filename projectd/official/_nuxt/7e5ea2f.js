@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[71],{1232:function(n,o,w){n.exports=w.p+"img/main_datalabbtn_icon.88384bd.png"}}]);

@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[87],{2777:function(n,t,o){"use strict";o.r(t);var e={components:{Combat:o(1279).default},data:function(){return{}}},l=o(3),component=Object(l.a)(e,(function(){return(0,this._self._c)("Combat")}),[],!1,null,null,null);t.default=component.exports;installComponents(component,{Combat:o(1279).default})}}]);

@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/th/guide/maintenance", {data:[{}],fetch:{},mutations:[]});

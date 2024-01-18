@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/en/policy/operation", {data:[{}],fetch:{},mutations:[]});

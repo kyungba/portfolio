@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/ko/media", {data:[{}],fetch:{},mutations:[]});

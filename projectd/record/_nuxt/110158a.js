@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[78],{2785:function(n,t,c){"use strict";c.r(t);var e={components:{Blackcard:c(581).default},layout:"empty",data:function(){return{}},mounted:function(){},methods:{}},o=c(3),component=Object(o.a)(e,(function(){return(0,this._self._c)("Blackcard")}),[],!1,null,"2c5d5f2c",null);t.default=component.exports}}]);

@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/fr/bug/1", {data:[{}],fetch:{},mutations:[]});

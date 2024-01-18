@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/th/wic/guide", {data:[{}],fetch:{},mutations:[]});

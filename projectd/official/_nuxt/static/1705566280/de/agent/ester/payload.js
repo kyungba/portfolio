@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/de/agent/ester", {data:[{}],fetch:{},mutations:[]});

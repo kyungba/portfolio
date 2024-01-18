@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/ja/map/altacity", {data:[{}],fetch:{},mutations:[]});

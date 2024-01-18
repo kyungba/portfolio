@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/it/post/write", {data:[{}],fetch:{},mutations:[]});

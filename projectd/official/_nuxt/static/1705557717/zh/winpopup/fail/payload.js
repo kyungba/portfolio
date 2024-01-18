@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/zh/winpopup/fail", {data:[{}],fetch:{},mutations:[]});

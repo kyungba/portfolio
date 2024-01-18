@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/ko/companion/discord", {data:[{}],fetch:{},mutations:[]});

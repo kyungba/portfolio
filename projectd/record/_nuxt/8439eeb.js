@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[88],{2776:function(n,t,e){"use strict";e.r(t);var c={components:{Match:e(1278).default},data:function(){return{}}},l=e(3),component=Object(l.a)(c,(function(){return(0,this._self._c)("Match")}),[],!1,null,null,null);t.default=component.exports;installComponents(component,{Match:e(1278).default})}}]);

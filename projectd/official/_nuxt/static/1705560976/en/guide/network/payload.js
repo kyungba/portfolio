@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/en/guide/network", {data:[{}],fetch:{},mutations:[]});

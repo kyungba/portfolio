@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/ko/events/survey", {data:[{}],fetch:{},mutations:[]});

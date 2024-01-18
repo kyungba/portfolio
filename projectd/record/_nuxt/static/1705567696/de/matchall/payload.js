@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/de/matchall", {data:[{}],fetch:{},mutations:[]});

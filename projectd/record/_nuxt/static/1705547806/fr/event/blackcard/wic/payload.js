@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/fr/event/blackcard/wic", {data:[{}],fetch:{},mutations:[]});

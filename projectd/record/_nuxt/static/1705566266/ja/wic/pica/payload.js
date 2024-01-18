@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/ja/wic/pica", {data:[{}],fetch:{},mutations:[]});

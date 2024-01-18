@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/fr/event/seed/summer", {data:[{}],fetch:{},mutations:[]});

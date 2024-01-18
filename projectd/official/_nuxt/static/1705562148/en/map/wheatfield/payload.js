@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/en/map/wheatfield", {data:[{}],fetch:{},mutations:[]});
