@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/zh/media", {data:[{}],fetch:{},mutations:[]});

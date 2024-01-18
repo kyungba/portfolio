@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/zh/wic/seed", {data:[{}],fetch:{},mutations:[]});

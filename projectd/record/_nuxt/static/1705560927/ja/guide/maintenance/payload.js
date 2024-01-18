@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/ja/guide/maintenance", {data:[{}],fetch:{},mutations:[]});
