@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/ko/close", {data:[{}],fetch:{},mutations:[]});

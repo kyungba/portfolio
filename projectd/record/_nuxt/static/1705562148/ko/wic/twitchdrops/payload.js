@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/ko/wic/twitchdrops", {data:[{}],fetch:{},mutations:[]});
