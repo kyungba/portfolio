@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/th/wic/ranking", {data:[{}],fetch:{},mutations:[]});

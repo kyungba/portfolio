@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/zh/close", {data:[{}],fetch:{},mutations:[]});
