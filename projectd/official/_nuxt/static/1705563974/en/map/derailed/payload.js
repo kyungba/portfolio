@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/en/map/derailed", {data:[{}],fetch:{},mutations:[]});

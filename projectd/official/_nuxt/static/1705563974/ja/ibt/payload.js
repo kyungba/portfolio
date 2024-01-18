@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/ja/ibt", {data:[{}],fetch:{},mutations:[]});

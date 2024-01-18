@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/tr/wic/match", {data:[{},{}],fetch:{},mutations:[]});

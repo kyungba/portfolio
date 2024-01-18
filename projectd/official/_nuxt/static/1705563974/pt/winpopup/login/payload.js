@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/pt/winpopup/login", {data:[{}],fetch:{},mutations:[]});
