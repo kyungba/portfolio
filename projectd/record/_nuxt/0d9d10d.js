@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[99],{2795:function(t,n,o){"use strict";o.r(n);var e={layout:"wic",components:{Combat:o(1279).default},data:function(){return{}}},l=o(3),component=Object(l.a)(e,(function(){return(0,this._self._c)("Combat")}),[],!1,null,null,null);n.default=component.exports;installComponents(component,{Combat:o(1279).default})}}]);

@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/th/companion/discord", {data:[{}],fetch:{},mutations:[]});

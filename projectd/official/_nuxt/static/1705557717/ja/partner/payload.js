@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/ja/partner", {data:[{}],fetch:{},mutations:[]});

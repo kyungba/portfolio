@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/fr/wic/match/combat", {data:[{},{}],fetch:{},mutations:[]});

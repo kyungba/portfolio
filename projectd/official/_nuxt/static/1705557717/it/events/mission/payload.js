@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/it/events/mission", {data:[{}],fetch:{},mutations:[]});
