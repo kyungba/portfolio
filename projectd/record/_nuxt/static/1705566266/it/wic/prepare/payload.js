@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/it/wic/prepare", {data:[{}],fetch:{},mutations:[]});

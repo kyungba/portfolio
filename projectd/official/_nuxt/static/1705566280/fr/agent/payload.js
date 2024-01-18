@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/fr/agent", {data:[{}],fetch:{},mutations:[]});

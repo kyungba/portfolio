@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/policy/eula", {data:[{}],fetch:{},mutations:[]});

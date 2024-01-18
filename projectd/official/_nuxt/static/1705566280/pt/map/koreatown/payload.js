@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/pt/map/koreatown", {data:[{}],fetch:{},mutations:[]});

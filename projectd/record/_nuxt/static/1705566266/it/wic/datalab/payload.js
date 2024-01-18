@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/it/wic/datalab", {data:[{}],fetch:{},mutations:[]});
