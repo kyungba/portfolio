@@ -5,21 +5,26 @@
       @mouseenter="thumbHover"
       v-for="(list, idx) in projectList" 
       :id="projectList[idx].id"
-      :class="{ing:projectList[idx].ing == 'Y'}"
+      :class="{ing:projectList[idx].ing}"
       :data-href="projectList[idx].href"
       :data-color="projectList[idx].color"
+      :data-gif-size="projectList[idx].gifSize"
       :data-img-size="projectList[idx].imgSize"
       :key="idx"
     >
-      <div class="imgArea"><img :src="require('@/assets/images/project_thumb_' + projectList[idx].id + '.jpg')" alt=""></div>
+      <div class="imgArea">
+        <img v-if="!list.ing" :src="require('@/assets/images/project_thumb_' + projectList[idx].id + '.jpg')" alt="">
+        <span v-else>작업중</span>
+      </div>
       <div class="txtArea">
         <p class="type">
-          <span v-if="projectList[idx].ing == 'Y'" class="ing">작업중</span>
-          <span v-if="projectList[idx].responsive == 'Y'" class="responsive">반응형</span>
-          <span v-if="projectList[idx].responsive != 'Y'" class="pcweb">PC</span>
-          <span v-if="projectList[idx].responsive != 'Y'" class="mobweb">MOBILE</span>
-          <span v-if="projectList[idx].app == 'Y'" class="app">APP</span>
+          <span v-if="projectList[idx].ing" class="ing">작업중</span>
+          <span v-if="projectList[idx].responsive" class="responsive">반응형</span>
+          <span v-if="!projectList[idx].responsive" class="pcweb">PC</span>
+          <span v-if="!projectList[idx].responsive" class="mobweb">MOBILE</span>
+          <span v-if="projectList[idx].app" class="app">APP</span>
           <span class="projectType">구축</span>
+          <span v-if="projectList[idx].skill" class="skill">{{ projectList[idx].skill }}</span>
         </p>
         <p class="tit"><span>{{projectList[idx].name}}</span></p>
       </div>
@@ -58,27 +63,29 @@ export default {
 
       let w, h, x, y, direction;
       $this.onmouseenter = (E) => {
-        w = $this.offsetWidth;
-        h = $this.offsetHeight;
-        x = ( E.pageX - $this.offsetLeft - ( w/2 )) * ( w > h ? ( h/w ) : 1 );
-        y = ( E.pageY - $this.offsetTop  - ( h/2 )) * ( h > w ? ( w/h ) : 1 );
-        direction = Math.round( ( ( ( Math.atan2(y, x) * (180 / Math.PI) ) + 180 ) / 90 ) + 3 )  % 4;
-        dimd.style.display = "block"
+        if(window.innerWidth > 981){
+          w = $this.offsetWidth;
+          h = $this.offsetHeight;
+          x = ( E.pageX - $this.offsetLeft - ( w/2 )) * ( w > h ? ( h/w ) : 1 );
+          y = ( E.pageY - $this.offsetTop  - ( h/2 )) * ( h > w ? ( w/h ) : 1 );
+          direction = Math.round( ( ( ( Math.atan2(y, x) * (180 / Math.PI) ) + 180 ) / 90 ) + 3 )  % 4;
+          dimd.style.display = "block"
 
-        if(direction == 0) {
-          dimd.style.top = -h+"px";
-          dimd.style.left = 0;
-        } else if(direction == 1) {
-          dimd.style.top = 0;
-          dimd.style.left = w+"px";
-        } else if(direction == 2) {
-          dimd.style.top = h+"px";
-          dimd.style.left = 0;
-        } else {
-          dimd.style.top = 0;
-          dimd.style.left = -w+"px";
+          if(direction == 0) {
+            dimd.style.top = -h+"px";
+            dimd.style.left = 0;
+          } else if(direction == 1) {
+            dimd.style.top = 0;
+            dimd.style.left = w+"px";
+          } else if(direction == 2) {
+            dimd.style.top = h+"px";
+            dimd.style.left = 0;
+          } else {
+            dimd.style.top = 0;
+            dimd.style.left = -w+"px";
+          }
+          gsap.to(dimd, {top:0, left:0, duration:0.5});
         }
-        gsap.to(dimd, {top:0, left:0, duration:0.5});
       }
       $this.onmouseleave = (E) => {
         w = $this.offsetWidth;
@@ -122,12 +129,14 @@ export default {
     popOpen (e){
       //초기화
       this.scrollT = 0;
+      this.gifSizeData = 0;
       this.imgSizeData = 0;
       this.imgLoad = 0;
 
       let $this = document.getElementById(e.currentTarget.id)
       let popup = document.querySelector(".viewPop");
       let dimd = document.querySelector(".dimdBg");
+      this.gifSizeData = $this.dataset.gifSize;
       this.imgSizeData = $this.dataset.imgSize;
       history.pushState(null, document.title, location.href);
       this.historyCnt++;
@@ -142,18 +151,26 @@ export default {
         if(!popup.classList.contains($this.id)){
           popup.querySelector(".titArea .tit span").innerText = $this.querySelector(".txtArea .tit").innerText;
           popup.className = "viewPop loading " + $this.id;
+          popup.querySelector(".titArea .link").className = 'link'
           if($this.dataset.href == "intra"){
-            if(!popup.querySelector(".titArea .link").classList.contains("on")){
-              popup.querySelector(".titArea .link").classList.add("on");
+            if(!popup.querySelector(".titArea .link").classList.contains("intra")){
+              popup.querySelector(".titArea .link").classList.add("intra");
+            }
+          }else if($this.dataset.href == 'end'){
+            if(!popup.querySelector(".titArea .link").classList.contains("end")){
+              popup.querySelector(".titArea .link").classList.add("end");
             }
           }else{
-            if(popup.querySelector(".titArea .link").classList.contains("on")){
-              popup.querySelector(".titArea .link").classList.remove("on");
-            }
             popup.querySelector(".titArea .link a").setAttribute("href",$this.dataset.href);
           }
+          popup.querySelector(".gifArea").innerHTML = "";
           popup.querySelector(".imgArea").innerHTML = "";
           popup.height = "";
+          for (var k = 0; k < $this.dataset.gifSize; k++) {
+            console.log(k)
+            var appendGif = require('@/assets/images/project_view_' + $this.id + k + '.webp');
+            popup.querySelector(".conArea .gifArea").insertAdjacentHTML('beforeend','<img src=' + appendGif + ' alt="" />');
+          }
           for (var i = 0; i < $this.dataset.imgSize; i++) {
             var appendImg = require('@/assets/images/project_view_' + $this.id + i + '.jpg');
             popup.querySelector(".conArea .imgArea").insertAdjacentHTML('beforeend','<img src=' + appendImg + ' alt="" />');

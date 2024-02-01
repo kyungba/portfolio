@@ -363,6 +363,23 @@ export default {
         }
 
         &.ing{
+          .imgArea{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:#f3f8fb;
+
+            span{
+              display:inline-block;
+              padding-top:70px;
+              font-weight:500;
+              font-size:20px;
+              line-height:20px;
+              color:#091835;
+              background:url('@/assets/images/project_thumb_ing.png') no-repeat center top;
+              background-size:50px;
+            }
+          }
           .dimd{
             &:after{
               content:'작업중'; 
@@ -656,6 +673,27 @@ export default {
                 }
               }
             }
+          }
+
+          &.ing{
+            .imgArea{
+              &:before{
+                content:'';
+                display:block;
+                padding-bottom:56.25%;
+              }
+
+              span{
+                padding-top:52px;
+                background-size:38px;
+                font-size:15px;
+                line-height:1;
+              }
+            }
+          }
+
+          .dimd{
+            display:none !important
           }
         }
 

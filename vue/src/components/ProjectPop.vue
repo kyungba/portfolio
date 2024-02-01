@@ -3,9 +3,10 @@
     <div class="popCon">
       <div class="titArea">
         <p class="tit"><span></span></p>
-        <span class="link"><a href="javascript:" target="blank">VISIT SITE</a><b>내부망 사이트라 링크를 제공하지 않습니다</b></span>
+        <span class="link"><a href="javascript:" target="blank">VISIT SITE</a><b>내부망 사이트라 링크를 제공하지 않습니다</b><strong>내부 사정으로 인해 타 사이트 통합 혹은 운영 종료된 사이트입니다.</strong><i>서비스 종료로 인하여 마크업 페이지로 대체합니다.</i></span>
       </div>
       <div class="conArea">
+        <div class="gifArea"></div>
         <div class="imgArea"></div>
         <div class="etcArea"></div>
       </div>
@@ -105,7 +106,7 @@ export default {
             background:url('@/assets/images//link_icon.png') no-repeat right 1px top 3px;
           }
 
-          b{
+          b, strong{
             display:none; 
             padding-left:34px; 
             font-family:'Noto Sans KR'; 
@@ -115,16 +116,47 @@ export default {
             color:#d84c4c; 
             background:url('@/assets/images//noLink.png') no-repeat left 1px center;
           }
+          i{
+            display:none;
+          }
 
-          &.on{
+          &.intra{
             text-align:center;
 
-            a{
+            a, strong{
               display:none
             }
 
             b{
               display:inline-block; 
+              font-family:'Noto Sans KR'; 
+              font-weight:500; 
+              font-size:14px; 
+              color:#e64949;
+            }
+          }
+          &.end{
+            a, b{
+              display:none
+            }
+
+            strong{
+              display:inline-block; 
+              font-family:'Noto Sans KR'; 
+              font-weight:500; 
+              font-size:14px; 
+              color:#e64949;
+            }
+          }
+          &.replace{
+            b, strong{
+              display:none
+            }
+
+            i{
+              display:inline-block;
+              margin-left:10px;
+              font-style:normal;
               font-family:'Noto Sans KR'; 
               font-weight:500; 
               font-size:14px; 
@@ -172,6 +204,12 @@ export default {
         .imgArea{
           img{
             width:100%
+          }
+        }
+        .gifArea{
+          img{
+            width:100%;
+            margin-bottom:20px;
           }
         }
 
@@ -376,7 +414,7 @@ export default {
               background-size:7px 12px;
             }
 
-            b{
+            b, strong{
               padding-left:24px;
               line-height:16px;
               background:url('@/assets/images/noLink.png') no-repeat left 1px center;

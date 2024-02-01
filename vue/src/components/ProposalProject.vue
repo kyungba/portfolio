@@ -15,7 +15,7 @@
       :key="idx"
     >
       <div class="txtArea">
-        <p v-if="projectList[idx].result == 'Y'" class="type">수주</p>
+        <p v-if="projectList[idx].result" class="type">수주</p>
         <p class="tit"><span>{{projectList[idx].name}}</span></p>
         <a v-if="projectList[idx].href != ''" :href="projectList[idx].href" target="_blank" class="link">Link</a>
       </div>
