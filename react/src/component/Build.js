@@ -95,7 +95,7 @@ const Build = () => {
                   {
                     list.responsive
                     ? <span className="responsive">반응형</span>
-                    : <><span className="pcweb">PC</span></>
+                    : <><span className="pcweb">PC</span><span className="mobweb">MOBILE</span></>
                   }
                   <span className="projectType">구축</span>
                   {
