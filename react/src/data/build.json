@@ -45,6 +45,16 @@
     "skill":"Nuxt"
   },
   {
+    "id" : "analysis",
+    "name": "데이터 분석툴을 통한 UX개선",
+    "color": "rgba(247, 56, 89, 0.8)",
+    "href": "intra",
+    "imgSize": 11,
+    "responsive": "",
+    "app" : "",
+    "ing": ""
+  },
+  {
     "id" : "nutrione",
     "name": "뉴트리원 기업홈페이지 구축프로젝트",
     "color": "rgba(60, 200, 20, 0.8)",
