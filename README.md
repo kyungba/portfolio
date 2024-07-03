@@ -1,3 +1,2 @@
-# KimKyungBaek Portfolio Site
+## KimKyungBaek Portfolio Site
 
-## Frontend
