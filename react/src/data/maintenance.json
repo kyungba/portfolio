@@ -1,20 +1,30 @@
 [
   {
+    "id" : "thefinals",
+    "name": "더 파이널스 공식 홈페이지",
+    "href": "https://thefinals.nexon.com/",
+    "framework": "React",
+    "reason": ""
+  },
+  {
     "id" : "fleamarket",
     "name": "서든어택 플리마켓 홈페이지",
     "href": "https://trade.sa.nexon.com/",
+    "framework": "Vue",
     "reason": ""
   },
   {
     "id" : "vxrecrd",
     "name": "베일드 엑스퍼트 기록실 홈페이지",
     "href": "",
+    "framework": "Vue",
     "reason": "서비스 종료"
   },
   {
     "id" : "vxofficial",
     "name": "베일드 엑스퍼트 공식 홈페이지",
     "href": "",
+    "framework": "Vue",
     "reason": "서비스 종료"
   },
   {

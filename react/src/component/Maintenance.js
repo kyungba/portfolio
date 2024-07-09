@@ -9,6 +9,9 @@ const Maintenance = () => {
             <div className="list" key={list.id}>
               <div className="txtArea">
                 <p className="tit"><span>{ list.name }</span></p>
+                { 
+                  list.framework && <div className="framework">{ list.framework }</div>
+                }
                 {
                   list.reason === ''
                   ? <a href={list.href} target="_blank" rel="noreferrer" className="link">Link</a>

@@ -243,6 +243,13 @@
           height:52px;
         }
 
+        .framework{
+          position:absolute;
+          bottom:20px;
+          right:22px;
+          color:#000;
+        }
+
         .link{
           display:inline-block;
           margin-top:6px;
@@ -700,6 +707,12 @@
 
           .tit{
             height:44px;
+          }
+
+          .framework{
+            bottom:12px;
+            right:15px;
+            font-size:14px
           }
 
           a{
