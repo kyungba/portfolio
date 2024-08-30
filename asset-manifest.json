@@ -1,7 +1,11 @@
 {
   "files": {
     "main.css": "./static/css/main.a0755357.css",
+<<<<<<< HEAD
     "main.js": "./static/js/main.ad9501a4.js",
+=======
+    "main.js": "./static/js/main.18ec71b1.js",
+>>>>>>> 641bc886f1d29269f91c711e66dd0a572a58d262
     "static/js/845.7b0e1b98.chunk.js": "./static/js/845.7b0e1b98.chunk.js",
     "static/media/project_view_vxofficial1.webp": "./static/media/project_view_vxofficial1.bf32dc8e52325113f48e.webp",
     "static/media/project_view_vxofficial0.webp": "./static/media/project_view_vxofficial0.4c8e27e2079ed9800bf2.webp",
@@ -175,11 +179,19 @@
     "static/media/Metropolis-Thin.woff2": "./static/media/Metropolis-Thin.800419b7706fad36c6d1.woff2",
     "index.html": "./index.html",
     "main.a0755357.css.map": "./static/css/main.a0755357.css.map",
+<<<<<<< HEAD
     "main.ad9501a4.js.map": "./static/js/main.ad9501a4.js.map",
+=======
+    "main.18ec71b1.js.map": "./static/js/main.18ec71b1.js.map",
+>>>>>>> 641bc886f1d29269f91c711e66dd0a572a58d262
     "845.7b0e1b98.chunk.js.map": "./static/js/845.7b0e1b98.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a0755357.css",
+<<<<<<< HEAD
     "static/js/main.ad9501a4.js"
+=======
+    "static/js/main.18ec71b1.js"
+>>>>>>> 641bc886f1d29269f91c711e66dd0a572a58d262
   ]
 }
