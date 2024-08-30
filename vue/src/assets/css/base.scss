@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&subset=korean");
+
+@mixin metroFont($name, $weight){
+  @font-face {
+    font-family: 'Metropolis';
+    font-weight: $weight;
+    src: local('Metropolis-#{$name}'),
+    url('@/assets/fonts/Metropolis-#{$name}.woff2') format('woff2'),
+    url('@/assets/fonts/Metropolis-#{$name}.woff') format('woff'),
+    url('@/assets/fonts/Metropolis-#{$name}.ttf') format('truetype');
+  }
+}
+
+@include metroFont(Thin, 100);
+@include metroFont(Light, 300);
+@include metroFont(Regular, 400);
+@include metroFont(Medium, 500);
+@include metroFont(Bold, 700);
+
+
+@mixin fontStyle{
+  font-family:"Metropolis", "Noto Sans KR", "맑은 고딕", "Malgun Gothic", sans-serif; 
+  font-weight:400; 
+  font-size:16px; 
+  color:#797979; 
+  letter-spacing:-0.7px; 
+}
+
+@mixin floatClear{
+  content:'';
+  display:block;
+  clear:both
+}
+
+*{
+  margin:0; 
+  padding:0; 
+  box-sizing:border-box;
+}
+
+:before, :after{
+  box-sizing:border-box
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+th, b, strong{
+  font-weight:normal
+}
+
+ul, ol, li{
+  list-style:none
+}
+
+img, fieldset{
+  border:none; 
+  vertical-align:top
+}
+
+legend, caption{
+  position:absolute; 
+  top:-9999px; 
+  left:-9999px; 
+  z-index:-1
+}
+
+textarea, button{
+  vertical-align:middle
+}
+
+input{
+  padding:3px 15px; 
+  height:40px; 
+  vertical-align:middle;
+  background:#fff; 
+  border:1px solid #c8c8c8; 
+  border-radius:0; 
+  @include fontStyle;
+
+  &:focus{
+    outline:none
+  }
+
+  &::-ms-reveal, &::-ms-clear {
+    display: none;
+  }
+
+  &[type="text"], &[type="email"], &[type="password"], &[type="number"] {
+    width:100%; 
+    background:#fff; 
+    border:1px solid #c8c8c8; 
+    -webkit-appearance: none; 
+    -webkit-box-shadow: none; 
+    -moz-box-shadow: none; 
+    box-shadow: none; 
+    caret-color:#000;
+
+    &:focus{
+      border:1px solid #000
+    }
+  }
+
+  &[type="number"]::-webkit-inner-spin-button, &[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance:none; 
+    margin:0;
+  }
+
+  &[type="radio"], &[type="checkbox"]{
+    border:none; 
+    padding:0; 
+    height:auto; 
+    -webkit-box-shadow: none; 
+    -moz-box-shadow: none; 
+    box-shadow: none;
+  }
+
+  &[readonly]{
+    cursor:auto;
+
+    &:focus{
+      border:1px solid #f7f7f7
+    }
+  }
+}
+
+select{
+  padding:0 35px 0 15px; 
+  height:40px; 
+  vertical-align:middle; 
+  background:#fff; 
+  border-radius:0; 
+  border:1px solid #c8c8c8; 
+  -webkit-appearance: none; 
+  appearance:none; 
+  -moz-appearance:none;
+  @include fontStyle;
+
+  &::-ms-expand{
+    display:none;
+  }
+
+  &::-ms-value{
+    color:inherit;
+    background:none;
+  }
+}
+
+option{
+  padding:10px
+}
+
+
+textarea{
+  padding:10px; 
+  vertical-align:middle; 
+  background:#fff; 
+  border:1px solid #d7d7d7; 
+  line-height:22px; 
+  -webkit-appearance: none; 
+  -webkit-box-shadow: none; 
+  -moz-box-shadow: none; 
+  box-shadow: none; 
+  border-radius:0; 
+  resize:none; 
+  overflow-y:auto;
+  @include fontStyle;
+
+  &:focus{
+    outline:none
+  }
+}
+
+::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder, :placeholder-shown{
+  color:#c8c8c8; font-size:16px;
+}
+
+a{
+  text-decoration:none; 
+  color:inherit; 
+  border:none;
+
+  &:hover, &:focus, &:active{
+    text-decoration:none;
+    outline:none;
+  }
+}
+
+table{
+  border-collapse:collapse; 
+  width:100%;
+}
+
+button{
+  background:none; 
+  border:none; 
+  cursor:pointer; 
+  overflow:visible; 
+  white-space: nowrap; 
+  @include fontStyle;    
+
+  &:active{
+    outline:none
+  }
+
+  &:-moz-focus-inner{
+    padding:0;
+    border:0;
+  }
+}
+
+html{
+  width:100%; 
+  height:100%;
+  
+  body{
+    position:relative; 
+    height:100%; 
+    -webkit-text-size-adjust:100%; 
+    -moz-text-size-adjust:100%; 
+    -ms-text-size-adjust:100%; 
+    -webkit-overflow-scrolling: touch;
+    @include fontStyle();
+    line-height:1; 
+  }
+
+  &.lock{
+    body{
+      height:100%;
+      overflow:hidden;
+    }
+  }
+
+  &.not_scroll body{
+    overflow:hidden;
+
+    *{
+      touch-action:none;
+    }
+  }
+}
+
+.inner{
+  position:relative; 
+  margin:0 auto; 
+  width:1280px;
+
+  &:after{
+    @include floatClear;
+  }
+}
+
+.clear{
+  &:after{
+    @include floatClear;
+  }
+}
+
+
+//Responsive
+@media all and (max-width:981px){
+  html.lock{
+    position:fixed; 
+    width:100%; 
+    height:100%;
+
+    body{
+      position:fixed; 
+      width:100%; 
+      height:100%; 
+      overflow:visible;
+    }
+
+    #wrap{
+      position:fixed;
+      width:100%;
+      height:100%
+    }
+  }
+}

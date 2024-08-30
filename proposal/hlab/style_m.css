@@ -1,0 +1,59 @@
+*{margin:0; padding:0;}
+html{width:100%; height:100%}
+body{position:relative; font-size:13px; font-family:'ë§‘ì€ ê³ ë”•', malgun-gothic, dotum,"ë‹ì›€",sans-serif; color:#555; -webkit-text-size-adjust:none; line-height:18px; letter-spacing:-1px; height:100%}
+body.main{background:none;}
+body,div,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,p,form,fieldset,table,tr,th,td{margin:0; padding:0}
+ul,ol,li{list-style:none}
+img, fieldset{border:none; vertical-align:top}
+legend, caption{display:none}
+textarea, button{vertical-align:middle}
+input, select{vertical-align:middle; background:#fff; border:1px solid #d7d7d7; font-family:'ë§‘ì€ ê³ ë”•', malgun-gothic, dotum,"ë‹ì›€",sans-serif; color:#555; border-radius:0; font-size:14px}
+input,option{padding:3px 10px; height:24px;}`
+input[type="radio"],input[type="checkbox"] {border:0}
+select{padding:3px; height:32px;}
+textarea{padding:10px; vertical-align:middle; background:#fff; border:1px solid #d7d7d7; font-family:'ë§‘ì€ ê³ ë”•', malgun-gothic, dotum,"ë‹ì›€",sans-serif; color:#555; line-height:24px; font-size:14px}
+.checkbox{padding:0; border:0; height:auto;}
+a{text-decoration:none; color:#666666; vertical-align:middle;}
+a:hover, a:focus, a:active{text-decoration:none;}
+table{border-collapse:collapse; width:100%;}
+button {border:0; margin:0; padding:0; cursor:pointer}
+
+#mobileWrap{position:relative; width:852px; min-width:852px; height:1024px; margin:0 auto;}
+#mobileWrap .header{position:relative; width:640px; height:107px; background:#fff}/*2017-01-23*/
+#mobileWrap{position:relative; width:852px; min-width:852px; height:1024px; margin:0 auto;}
+#mobileWrap .btBox{position:absolute; top:250px; right:-10px; z-index:100; display:block}
+#mobileWrap .btBox a{display:block; padding-bottom:10px;}
+.header{position:relative; width:640px; height:110px;}
+.header .gnbBtn{position:absolute; top:39px; left:39px;}
+.header .logo{position:absolute; top:34px; left:192px;}
+.header .barcodeBtn{position:absolute; top:39px; left:572px;}
+.cBody .visual{position:relative; width:640px; height:999px; background:url("./images_m/main_visual.jpg") no-repeat 0 0;}
+.cBody .visual .counter{position:absolute; top:140px; right:214px; font-family:"Malgun Gothic"; font-size:90px; color:#000; letter-spacing:-4px;}
+.cBody .visual .bltDiv{position:absolute; top:705px; left:274px;}
+.cBody .visual .rollDiv{position:absolute; top:307px; left:0;}
+.cBody .visual .rollDiv .cont{display:block; position:absolute; top:0; left:-507px; overflow:hidden; width:5000px; height:371px;}
+.cBody .visual .rollDiv .cont p{float:left; width:534px; margin-left:25px; opacity:0.5}
+.cBody .visual .rollDiv .cont p.on{opacity:1;}
+.cBody .visual .rollDiv .cont p:first-child{margin-left:0;}
+.cardRoll{padding:20px; position:relative; height:365px;}
+.cardRoll .cardBox{position:absolute; top:20px; left:-517px; width:3000px; height:345px;}
+.cardRoll .cardBox p{float:left; width:544px; margin-left:20px; opacity:0.5}
+.cardRoll .cardBox p:first-child{margin-left:0;}
+.cardRoll .cardBox p.on{opacity:1;}
+.allMenu{position:absolute; top:0; left:0; z-index:10;}
+.barcodeDiv{position:absolute; top:0; left:0; z-index:10;}
+.barcodeDiv .counter1{position:absolute; top:260px; right:352px; font-size:70px; font-weight:bold; letter-spacing:-4px; color:#333;}
+.blackBg{position:absolute; top:0; left:0; width:640px; height:1162px; background:rgba(0, 0, 0, 0.8);}
+
+#mobileWrap .btBox{position:absolute; top:250px; right:-10px; z-index:100; display:block}
+#mobileWrap .btBox a{display:block; padding-bottom:10px;}
+#mobileWrap .phone{position:absolute; top:0; left:0; z-index:10;}
+#mobileWrap .contents{position:absolute; top:211px; left:107px; width:640px; height:1136px; overflow:hidden; z-index:10;}
+#mobileWrap .contents .wrap{position:relative; width:100%; height:5647px;}
+
+#mobileWrap .contents .wrap .logo{position:absolute; top:222px; left:0; right:0; margin:0 auto; text-align:center;}
+#mobileWrap .contents .wrap .mGnb{position:absolute; top:30px; right:30px;}
+#mobileWrap .contents .wrap .txt1{position:absolute; top:382px; left:0; right:0; margin:0 auto; text-align:center;}
+#mobileWrap .contents .wrap .txt1 img{position:absolute; top:0; left:0; right:0; margin:0 auto;}
+#mobileWrap .contents .wrap .txt1 .img2{opacity:0;}
+#mobileWrap .contents .wrap .mainBg{position:absolute; top:0; left:0;}
