@@ -1,14 +1,14 @@
 [
   {
-    "id" : "saduo",
-    "name": "서든어택 서든해듀오 구축프로젝트",
+    "id" : "duo",
+    "name": "서든어택 알려듀오 구축프로젝트",
     "color": "rgba(74, 255, 255, 0.8)",
-    "href": "http://trade.sa.nexon.com/",
-    "imgSize": 10,
+    "href": "https://barracks.sa.nexon.com/duo",
+    "imgSize": 9,
     "responsive": "y",
     "app" : "",
-    "ing": "y",
-    "skill":"React"
+    "ing": "",
+    "skill":"Vue"
   },
   {
     "id" : "fleamarket",

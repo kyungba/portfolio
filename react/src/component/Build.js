@@ -79,7 +79,7 @@ const Build = () => {
       <div className="listDiv build">
         { Data.map(list => {
           return (
-            <div className={"list" + (list.ing && " ing")} key={list.id} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} onClick={() => popOpenEvt(list)}>
+            <div className={"list " + (list.ing ? "ing" : undefined)} key={list.id} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} onClick={() => popOpenEvt(list)}>
               <div className="imgArea">
                 {
                   list.ing

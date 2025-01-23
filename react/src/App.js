@@ -16,9 +16,9 @@ function App() {
     <>
       <p className="title">Portfolio</p>
       <div className="tabs">
-        <button className={(tabN === 0 && "on")} onClick={() => clickTab(0)}>구축</button>
-        <button className={(tabN === 1 && "on")} onClick={() => clickTab(1)}>운영</button>
-        <button className={(tabN === 2 && "on")} onClick={() => clickTab(2)}>제안</button>
+        <button className={(tabN === 0 ? "on" : undefined)} onClick={() => clickTab(0)}>구축</button>
+        <button className={(tabN === 1 ? "on" : undefined)} onClick={() => clickTab(1)}>운영</button>
+        <button className={(tabN === 2 ? "on" : undefined)} onClick={() => clickTab(2)}>제안</button>
       </div>
       {
         {
