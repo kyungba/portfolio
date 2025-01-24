@@ -6,9 +6,9 @@ import ViewPop from 'component/ViewPop'
 import { useSelector } from 'react-redux';
 
 function App() {
-  const [tabN, tabEvent] = useState(0)
+  const [tabN, setTabN] = useState(0)
   const clickTab = (idx) => {
-    tabEvent(idx)
+    setTabN(idx)
   }
   const isPop = useSelector((state :any) => state.popState.isPop )
   
