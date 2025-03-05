@@ -2,9 +2,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import { popClose } from 'reducer/popup'
 
 const ViewPop = () => {
-  const popData = useSelector((state :any) => state.popState.popData.payload )
+  const popData = useSelector((state:any) => state.popState.popData.payload )
   const dispatch = useDispatch()
-  const popCloseEvt = (E) => {
+  const popCloseEvt = (E:React.MouseEvent<HTMLButtonElement>) => {
     if(E.target === E.currentTarget){
       dispatch(popClose())
     }
@@ -26,7 +26,7 @@ const ViewPop = () => {
 
   return (
     <>
-      <div className="viewPop" onClick={popCloseEvt}>
+      <div className="viewPop" onClick={() => popCloseEvt}>
         <div className="popCon">
           <div className="titArea">
             <p className="tit"><span>{ popData.name }</span></p>

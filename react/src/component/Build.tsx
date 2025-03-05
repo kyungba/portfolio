@@ -4,9 +4,9 @@ import { useDispatch } from 'react-redux';
 import { popOpen } from 'reducer/popup'
 
 const Build = () => {
-  let w:any, h:any, x:any, y:any, direction:any;
-  const mouseEnter = (E) => {
-    let dimd = E.currentTarget.querySelector(".dimd")
+  let w:number, h:number, x:number, y:number, direction:number;
+  const mouseEnter = (E:React.MouseEvent<HTMLButtonElement>) => {
+    const dimd = E.currentTarget.querySelector(".dimd") as HTMLElement
 
     if(window.innerWidth > 981){
       w = E.currentTarget.offsetWidth;
@@ -14,26 +14,28 @@ const Build = () => {
       x = ( E.pageX - E.currentTarget.offsetLeft - ( w/2 )) * ( w > h ? ( h/w ) : 1 )
       y = ( E.pageY - E.currentTarget.offsetTop  - ( h/2 )) * ( h > w ? ( w/h ) : 1 )
       direction = Math.round( ( ( ( Math.atan2(y, x) * (180 / Math.PI) ) + 180 ) / 90 ) + 3 )  % 4
-      dimd.style.display = "block"
+
+      let dimdStyle = dimd.style as React.CSSProperties
+      dimdStyle.display = "block"
 
       if(direction === 0) {
-        dimd.style.top = -h+"px";
-        dimd.style.left = 0;
+        dimdStyle.top = -h+"px";
+        dimdStyle.left = 0;
       } else if(direction === 1) {
-        dimd.style.top = 0;
-        dimd.style.left = w+"px";
+        dimdStyle.top = 0;
+        dimdStyle.left = w+"px";
       } else if(direction === 2) {
-        dimd.style.top = h+"px";
-        dimd.style.left = 0;
+        dimdStyle.top = h+"px";
+        dimdStyle.left = 0;
       } else {
-        dimd.style.top = 0;
-        dimd.style.left = -w+"px";
+        dimdStyle.top = 0;
+        dimdStyle.left = -w+"px";
       }
       gsap.to(dimd, {top:0, left:0, duration:0.35});
     }
   }
-  const mouseLeave = (E) => {
-    let dimd = E.currentTarget.querySelector(".dimd")
+  const mouseLeave = (E:React.MouseEvent<HTMLButtonElement>) => {
+    let dimd = E.currentTarget.querySelector(".dimd") as HTMLElement
     w = E.currentTarget.offsetWidth;
     h = E.currentTarget.offsetHeight;
     x = ( E.pageX - E.currentTarget.offsetLeft - ( w/2 )) * ( w > h ? ( h/w ) : 1 )
@@ -50,10 +52,23 @@ const Build = () => {
       gsap.to(dimd, {top:0, left:-w, duration:0.35,ease:"Power3.out"});
     }
   }
+
+  interface dataType {
+    app:string,
+    color:string,
+    href:string,
+    id:string,
+    imgSize:number,
+    ing:string,
+    name:string,
+    responsive:string,
+    skill:string[]
+  }
   const dispatch = useDispatch()
-  const popOpenEvt = (data) => {
+  const popOpenEvt = (data:dataType) => {
+    console.log(data)
     if(data.ing === ''){
-      dispatch(popOpen(data))
+      dispatch(popOpen(data as any))
     }else{
       if (document.querySelector(".toastPop") != null) {
         document.querySelector(".toastPop").remove();
@@ -79,7 +94,7 @@ const Build = () => {
       <div className="listDiv build">
         { Data.map(list => {
           return (
-            <div className={"list " + (list.ing ? "ing" : undefined)} key={list.id} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} onClick={() => popOpenEvt(list)}>
+            <div className={"list " + (list.ing ? "ing" : '')} key={list.id} onMouseEnter={() => mouseEnter} onMouseLeave={() => mouseLeave} onClick={() => popOpenEvt(list as dataType)}>
               <div className="imgArea">
                 {
                   list.ing
@@ -88,7 +103,7 @@ const Build = () => {
                 }
               </div>
               <div className="txtArea">
-                <p className="type">
+                <div className="type">
                   {
                     list.ing && <span className="ing">작업중</span>
                   }
@@ -99,9 +114,18 @@ const Build = () => {
                   }
                   <span className="projectType">구축</span>
                   {
-                    list.skill && <span className="skill">{ list.skill }</span>
+                    list.skill &&
+                    <div className="skillSet">
+                      {(list.skill).map((item, idx) => {
+                        return (
+                          <span className="skill" key={idx}>
+                            { item }
+                          </span>
+                        )
+                      })}
+                    </div>
                   }
-                </p>
+                </div>
                 <p className="tit"><span>{list.name}</span></p>
               </div>
               <p className="dimd" style={{background:list.color}} />

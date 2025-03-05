@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux';
 
 function App() {
   const [tabN, setTabN] = useState(0)
-  const clickTab = (idx) => {
+  const clickTab = (idx:number) => {
     setTabN(idx)
   }
   const isPop = useSelector((state :any) => state.popState.isPop )

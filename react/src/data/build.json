@@ -1,5 +1,16 @@
 [
   {
+    "id" : "ezwel",
+    "name": "현대이지웰 기업 복지몰 특화 DX 이커머스 플랫폼",
+    "color": "rgba(74, 255, 255, 0.8)",
+    "href": "",
+    "imgSize": 0,
+    "responsive": "",
+    "app" : "",
+    "ing": "y",
+    "skill":["Nuxt","Typescript"]
+  },
+  {
     "id" : "duo",
     "name": "서든어택 알려듀오 구축프로젝트",
     "color": "rgba(74, 255, 255, 0.8)",
@@ -8,7 +19,7 @@
     "responsive": "y",
     "app" : "",
     "ing": "",
-    "skill":"Vue"
+    "skill":["Vue","React"]
   },
   {
     "id" : "fleamarket",
@@ -19,7 +30,7 @@
     "responsive": "y",
     "app" : "",
     "ing": "",
-    "skill":"Vue"
+    "skill":["Vue"]
   },
   {
     "id" : "vxofficial",
@@ -31,7 +42,7 @@
     "responsive": "y",
     "app" : "",
     "ing": "",
-    "skill":"Nuxt"
+    "skill":["Nuxt"]
   },
   {
     "id" : "vxrecord",
@@ -42,7 +53,7 @@
     "responsive": "y",
     "app" : "",
     "ing": "",
-    "skill":"Nuxt"
+    "skill":["Nuxt"]
   },
   {
     "id" : "analysis",

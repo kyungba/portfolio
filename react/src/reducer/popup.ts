@@ -12,7 +12,7 @@ const popState = createSlice({
       state.popData = data
       document.body.style.overflow = 'hidden'
     },
-    popClose: (state) => {
+    popClose: (state:any) => {
       state.isPop = false
       state.popData = []
       document.body.style.overflow = ''
