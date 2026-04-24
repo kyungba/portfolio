@@ -1,0 +1,192 @@
+[
+  {
+    "id" : "thefinals",
+    "name": "더 파이널스 공식 홈페이지",
+    "href": "https://thefinals.nexon.com/",
+    "framework": "React",
+    "reason": ""
+  },
+  {
+    "id" : "fleamarket",
+    "name": "서든어택 플리마켓 홈페이지",
+    "href": "https://trade.sa.nexon.com/",
+    "framework": "Vue",
+    "reason": ""
+  },
+  {
+    "id" : "vxrecrd",
+    "name": "베일드 엑스퍼트 기록실 홈페이지",
+    "href": "",
+    "framework": "Vue",
+    "reason": "서비스 종료"
+  },
+  {
+    "id" : "vxofficial",
+    "name": "베일드 엑스퍼트 공식 홈페이지",
+    "href": "",
+    "framework": "Vue",
+    "reason": "서비스 종료"
+  },
+  {
+    "id" : "sa",
+    "name": "서든어택 홈페이지",
+    "href": "http://sa.nexon.com/",
+    "reason": ""
+  },
+  {
+    "id" : "nutrione",
+    "name": "뉴트리원 기업홈페이지",
+    "href": "http://company.nutrione.co.kr/",
+    "reason": ""
+  },
+  {
+    "id" : "bblab",
+    "name": "BBLAB 오피셜",
+    "href": "http://www.bblab-official.com/",
+    "reason": ""
+  },
+  {
+    "id" : "nutrionemall",
+    "name": "뉴트리원 자사몰",
+    "href": "http://www.nutrione.co.kr/",
+    "reason": ""
+  },
+  {
+    "id" : "puzzle",
+    "name": "MYPUZZLE 구축프로젝트",
+    "href": "http://www.mypuzzle.co.kr/",
+    "reason": ""
+  },
+  {
+    "id" : "haatz",
+    "name": "하츠 홈페이지",
+    "href": "http://www.haatz.com/",
+    "reason": ""
+  },
+  {
+    "id" : "his",
+    "name": "효성인포메이션",
+    "href": "http://www.his21.co.kr/main/index.do",
+    "reason": ""
+  },
+  {
+    "id" : "farmhannong",
+    "name": "팜한농 홈페이지",
+    "href": "http://www.farmhannong.com/kor/main/index.do",
+    "reason": ""
+  },
+  {
+    "id" : "hyundaimobis",
+    "name": "현대모비스",
+    "href": "https://www.mobis.co.kr/kr/index.do",
+    "reason": ""
+  },
+  {
+    "id" : "hyundaiglovis",
+    "name": "현대글로비스",
+    "href": "https://www.glovis.net/Kor/main/index.do",
+    "reason": ""
+  },
+  {
+    "id" : "givekorea",
+    "name": "고려대학교 대외협력부",
+    "href": "https://give.korea.ac.kr/",
+    "reason": ""
+  },
+  {
+    "id" : "oiakorea",
+    "name": "고려대학교 국제처",
+    "href": "http://oia.korea.ac.kr/",
+    "reason": ""
+  },
+  {
+    "id" : "yuhan",
+    "name": "유한양행",
+    "href": "https://www.yuhan.co.kr/",
+    "reason": ""
+  },
+  {
+    "id" : "seoulfc",
+    "name": "서울영상위원회",
+    "href": "https://www.seoulfc.or.kr/",
+    "reason": ""
+  },
+  {
+    "id" : "wordvision",
+    "name": "월드비전 세계시민학교",
+    "href": "https://www.wvschool.or.kr/",
+    "reason": ""
+  },
+  {
+    "id" : "coway",
+    "name": "코웨이 코러스",
+    "href": "",
+    "reason": "내부망"
+  },
+  {
+    "id" : "cowaysangsang",
+    "name": "코웨이 상상오션",
+    "href": "",
+    "reason": "내부망"
+  },
+  {
+    "id" : "recruithyundai",
+    "name": "현대백화점 채용",
+    "href": "https://recruit.ehyundai.com/",
+    "reason": ""
+  },
+  {
+    "id" : "kiatong",
+    "name": "기아통 Application",
+    "href": "",
+    "reason": "내부망"
+  },
+  {
+    "id" : "igse",
+    "name": "국제영어대학원대학교",
+    "href": "https://www.igse.ac.kr/",
+    "reason": ""
+  },
+  {
+    "id" : "daegucvb",
+    "name": "대구컨벤션뷰로",
+    "href": "http://daegucvb.com/mice/main/",
+    "reason": ""
+  },
+  {
+    "id" : "daemyunglife",
+    "name": "대명라이프웨이",
+    "href": "",
+    "reason": "타사이트 이전"
+  },
+  {
+    "id" : "hew",
+    "name": "휴포탈",
+    "href": "",
+    "reason": "내부망"
+  },
+  {
+    "id" : "smartchoice",
+    "name": "스마트초이스",
+    "href": "https://www.smartchoice.or.kr/",
+    "reason": ""
+  },
+  {
+    "id" : "kaonmedia",
+    "name": "가온미디어",
+    "href": "http://www.kaonmedia.co.kr/",
+    "reason": ""
+  },
+  {
+    "id" : "woojin",
+    "name": "우진일렉트로나이트",
+    "href": "http://www.woojinhen.com/",
+    "reason": ""
+  },
+  {
+    "id" : "etc",
+    "name": "5개 업체 이상 뉴스레터",
+    "href": "",
+    "reason": "내부망"
+  }
+]
