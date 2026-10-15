@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.1d47f14d.css",
-    "main.js": "/portfolio/static/js/main.8856fe3f.js",
+    "main.js": "/portfolio/static/js/main.bc1dc73b.js",
     "static/media/project_view_vxofficial1.webp": "/portfolio/static/media/project_view_vxofficial1.bf32dc8e52325113f48e.webp",
     "static/media/project_view_vxofficial0.webp": "/portfolio/static/media/project_view_vxofficial0.4c8e27e2079ed9800bf2.webp",
     "static/media/project_view_fleamarket2.jpg": "/portfolio/static/media/project_view_fleamarket2.92b4a65d53131ccf3a87.jpg",
@@ -184,10 +184,10 @@
     "static/media/Metropolis-Thin.woff2": "/portfolio/static/media/Metropolis-Thin.800419b7706fad36c6d1.woff2",
     "index.html": "/portfolio/index.html",
     "main.1d47f14d.css.map": "/portfolio/static/css/main.1d47f14d.css.map",
-    "main.8856fe3f.js.map": "/portfolio/static/js/main.8856fe3f.js.map"
+    "main.bc1dc73b.js.map": "/portfolio/static/js/main.bc1dc73b.js.map"
   },
   "entrypoints": [
     "static/css/main.1d47f14d.css",
-    "static/js/main.8856fe3f.js"
+    "static/js/main.bc1dc73b.js"
   ]
 }
